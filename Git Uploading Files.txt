@@ -1,0 +1,17 @@
+Step 1: Open Command Prompt and from your project where it is developed
+
+Step 2: git init -b main (This says initalizing git)
+
+Step 3: git add . (This says adding all your projects into git)
+
+Step 4: git commit -m "Initail Commit" (This says saving all files by adding some message)
+
+Step 5: git remote add origin <GIT LINK> (This says adding your project link using this command. replace git link with your project, also remove <>)
+
+Step 6: git remote -v
+
+Step 7: git pull <GIT LINK>
+
+Step 8: git push -f origin main
+
+Later refresh the page and check. Before using these commands make sure you have installed git in your system. If not download.
