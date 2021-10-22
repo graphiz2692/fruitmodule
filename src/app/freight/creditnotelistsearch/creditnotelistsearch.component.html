@@ -1,0 +1,251 @@
+
+<section class="bodysection">
+  <div class="container-fluid ">
+      <div class="row">
+          <div class="col-sm-12">
+
+<div class="page-header_head">
+  <div>
+
+      <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+          <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+          <li class="breadcrumb-item" > <a [routerLink]="['/freight/creditnotelist']" routerLinkActive="router-link-active" > customer credit note list</a></li>
+          <li class="breadcrumb-item active" aria-current="page">add credit note list</li>
+      </ol>
+  </div>
+
+</div>
+
+    
+        
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Customer Credit Note
+    
+      </mat-card-title>
+       
+    </mat-card-header>
+    <mat-card-content>
+  
+     
+<div class="row">
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>SEARCH FOR INVOICE NO.</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        
+    </div>
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>CREDIT NOTE NO</mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>CUSTOMER</mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>CREDIT</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        
+    </div>
+    <div class="col-md-4">
+        <mat-form-field appearance="standard">
+            <mat-label>C/N DATE</mat-label>
+            <input matInput [matDatepicker]="date">
+            <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+            <mat-datepicker #date></mat-datepicker>
+          </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      
+        <mat-form-field  appearance="standard">
+            <mat-label>  TOTAL TAX AMOUNT</mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>  TOTAL LOCAL AMOUNT</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        
+    </div>
+
+    <div class="col-md-4">
+        <mat-form-field appearance="standard">
+            <mat-label> MODULES</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let item of module" [value]="item.value">
+                {{item.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label> REMARKS</mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+</div>
+
+
+
+
+      
+    </mat-card-content>
+ 
+  </mat-card>
+
+
+  <mat-card class="mt-top">
+    <mat-card-header>
+      <mat-card-title>
+        CUSTOMER CREDIT NOTE
+        
+         <span class="rgt-icns"> 
+             <button mat-raised-button color="primary" class="rfesh" disabled > <mat-icon>save</mat-icon> </button>
+          </span>   
+
+    
+      </mat-card-title>
+       
+    </mat-card-header>
+    <mat-card-content>
+  
+        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+           <!-- INVOICE NO -->
+            <ng-container matColumnDef="INVOICENO">
+              <th mat-header-cell *matHeaderCellDef>    INVOICE NO
+                   </th>
+              <td mat-cell *matCellDef="let element"> {{element.INVOICENO}} </td>
+            </ng-container>
+  
+            <!-- ORDER NO-->
+            <ng-container matColumnDef="ORDERNO">
+              <th mat-header-cell *matHeaderCellDef> ORDER NO </th>
+              <td mat-cell *matCellDef="let element"> {{element.ORDERNO}} </td>
+            </ng-container>
+          
+        
+          
+            <!-- CONTAINER KEY -->
+            <ng-container matColumnDef="CONTAINERKEY">
+              <th mat-header-cell *matHeaderCellDef> CONTAINER KEY </th>
+              <td mat-cell *matCellDef="let element"> {{element.CONTAINERKEY}} </td>
+            </ng-container>
+          
+            <!-- SIZE -->
+            <ng-container matColumnDef="SIZE">
+              <th mat-header-cell *matHeaderCellDef>SIZE </th>
+              <td mat-cell *matCellDef="let element"> {{element.SIZE}} </td>
+            </ng-container>
+          
+          <!-- 	JOB NO -->
+            <ng-container matColumnDef="JOBNO">
+              <th mat-header-cell *matHeaderCellDef> JOB NO </th>
+              <td mat-cell *matCellDef="let element"> {{element.JOBNO}} </td>
+            </ng-container>
+  
+  
+          <!-- 	CHARGE CODE -->
+            <ng-container matColumnDef="CHARGECODE">
+              <th mat-header-cell *matHeaderCellDef>CHARGE CODE </th>
+              <td mat-cell *matCellDef="let element"> {{element.CHARGECODE}} </td>
+            </ng-container>
+  
+          <!-- 	DESCRIPTION -->
+            <ng-container matColumnDef="DESCRIPTION">
+              <th mat-header-cell *matHeaderCellDef>DESCRIPTION </th>
+              <td mat-cell *matCellDef="let element"> {{element.DESCRIPTION}} </td>
+            </ng-container>
+          
+          <!-- 	BILLING UNIT-->
+            <ng-container matColumnDef="BILLINGUNIT">
+              <th mat-header-cell *matHeaderCellDef>BILLING UNIT </th>
+              <td mat-cell *matCellDef="let element"> {{element.BILLINGUNIT}} </td>
+            </ng-container>
+
+              <!-- 	CURR -->
+              <ng-container matColumnDef="CURR">
+                <th mat-header-cell *matHeaderCellDef>CURR </th>
+                <td mat-cell *matCellDef="let element"> {{element.CURR}} </td>
+              </ng-container>
+
+                <!-- 	EX. RATE -->
+                <ng-container matColumnDef="EXRATE">
+                    <th mat-header-cell *matHeaderCellDef>EX. RATE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.EXRATE}} </td>
+                  </ng-container>
+
+                     <!--QTY-->
+                <ng-container matColumnDef="QTY">
+                    <th mat-header-cell *matHeaderCellDef>QTY </th>
+                    <td mat-cell *matCellDef="let element"> {{element.QTY}} </td>
+                  </ng-container>
+
+                    <!--PRICE-->
+                <ng-container matColumnDef="PRICE">
+                    <th mat-header-cell *matHeaderCellDef>PRICE</th>
+                    <td mat-cell *matCellDef="let element"> {{element.PRICE}} </td>
+                  </ng-container>
+
+
+                    <!--BASE AMT-->
+                <ng-container matColumnDef="BASEAMT">
+                    <th mat-header-cell *matHeaderCellDef>BASE AMT</th>
+                    <td mat-cell *matCellDef="let element"> {{element.BASEAMT}} </td>
+                  </ng-container>
+          
+                    <!--LOCAL AMT.-->
+                <ng-container matColumnDef="LOCALAMT">
+                    <th mat-header-cell *matHeaderCellDef>LOCAL AMT.</th>
+                    <td mat-cell *matCellDef="let element"> {{element.LOCALAMT}} </td>
+                  </ng-container>
+          
+         
+            
+          
+            <tr mat-header-row *matHeaderRowDef="col"></tr>
+            <tr mat-row *matRowDef="let row; columns: col;"></tr>
+            
+          </table>
+    </mat-card-content>
+ 
+  </mat-card>
+
+ 
+
+
+
+
+ 
+        
+   
+
+  
+
+</div>
+</div>
+</div>
+</section>

@@ -1,0 +1,208 @@
+<app-navbar></app-navbar> 
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Page Header -->
+                <div class="page-header_head">
+                    <div>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Billing</li>
+                            <li class="breadcrumb-item active" aria-current="page">Vendor Unbilled Jobs</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- End Page Header -->
+
+                <!--Row-->
+                <div class="row row-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 grid-margin">
+                        <div class="card custom-card">
+                            <div class="card-header border-bottom-0 titleheadercard">
+                                <div class="d-flex justify-content-between">
+                                    <label class="main-content-label">
+                                        PENDING JOBS</label>
+                                    <div class="ml-auto float-right">
+                                        <div class="ml-auto  ">                                                                           
+                                            <button class="btn btn-sm card-contorls" href="javascript:;" role="button" (click)="toggle()">
+                                                <i class="fa fa-filter "></i> 
+                                            </button>
+                                        </div>
+                                    </div>                                                       
+                                </div>
+                            </div>   
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card custom-card m-0">
+                                    <div class="card-body p-0">
+                                           <div>
+                                            <div class="mg-t-5" id="collapseExample" *ngIf="isCollapsed">                                                                                        
+                                                <div class="card card-body"> 
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modal-basic-title"> <b>PENDING JOBS ADVANCE SEARCH</b></h5>
+                                                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>                                                
+                                                </div>                                                                                                                                                                                         
+                                                    <div class="container-fluid">                                                                                                        
+                                                        <!-- ??Added  to close the Search/Filter Popup -->                                                                                                                                                    
+                                                        <br>
+                                                        <div class="row">                                                                                                                  
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label for="">VENDOR NAME</label>
+                                                                    <input type="text" class="form-control"
+                                                                        name="vendorname"
+                                                                        placeholder="Vendor Name.....">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group">
+                                                                    <label for="">Date From</label>
+                                                                    <input type="date" placeholder="DD/MM/YYYY" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <label for="">VENDOR NAME</label>
+                                                                <div class="input-group">
+                                                                    <input class="form-control"
+                                                                        placeholder="Search for Vendor Name..." type="text">
+                                                                    <span class="input-group-btn"><button
+                                                                            class="btn ripple btn-primary" type="button">
+                                                                            <span class="input-group-btn"><i
+                                                                                    class="fa fa-search"></i></span></button></span>
+                                                                </div>
+                                                            </div>                                                            
+                                                            <div class="col-sm-3">
+                                                                <div class="form-group">
+                                                                    <label for="">Date To</label>
+                                                                    <input type="date" placeholder="DD/MM/YYYY" class="form-control">
+                                                                </div>
+                                                            </div>                                                                                                                                     
+                                                        </div>                                                    
+                                                        <!-- <div class="row">                                                            
+                                                            <div class="col-sm-4 text-right">
+                                                                <button type="button" class="btn btn-sm collaps-contorls-sear mr-1 ml-1">
+                                                                    SEARCH
+                                                                </button>
+                                                                <button type="button" class="btn btn-sm collaps-contorls-sear mr-1 ml-1">
+                                                                    RESET
+                                                                </button>                                                                
+                                                            </div>                                                                                                          
+                                                        </div>                                                                                                             -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+
+
+                            
+                            <div class="table-responsive border userlist-table">
+                                <ngx-datatable 
+                                class="material"
+                                [rows]="billingpendingjobs"
+                                [rowHeight]="50"
+                                columnMode="force"
+                                [headerHeight]="50"
+                                [footerHeight]="50"
+                                [scrollbarV]="true"
+                                [scrollbarH]="false"
+                                [summaryRow]="true"
+                                [summaryPosition]="'bottom'"
+                                >
+                                <ngx-datatable-column name="SELECT" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="WORK ORDER" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="RIVISION" [width]="30"></ngx-datatable-column>
+                                <ngx-datatable-column name="DATE" [width]="30"></ngx-datatable-column>
+                                <ngx-datatable-column name="CONTAINER NO." [width]="40"></ngx-datatable-column>
+                                <ngx-datatable-column name="GRADE" [width]="40"></ngx-datatable-column>
+                                <ngx-datatable-column name="TERMINAL" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="CUSTOMER" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="LESSEE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="CUSTOMER AMOUNT" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="LESSEE AMOUNT" [width]="50"></ngx-datatable-column>
+                                </ngx-datatable>                    
+                             </div>                                                      
+                        </div>
+                    </div><!-- COL END -->
+                </div>
+
+                <div class="row row-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 grid-margin">
+                        <div class="card custom-card">
+                            <div class="card-header border-bottom-0 titleheadercard">
+                                <div class="d-flex justify-content-between">
+                                    <label class="main-content-label">
+                                        CHANGES DETAILS</label>
+                                    <div class="ml-auto float-right">
+                                    </div>                                                       
+                                </div>
+                            </div>   
+                            <div class="table-responsive border userlist-table">
+                                <ngx-datatable 
+                                class="material"
+                                [rows]="billingChangesDetails"
+                                [rowHeight]="50"
+                                columnMode="force"
+                                [headerHeight]="50"
+                                [footerHeight]="50"
+                                [scrollbarV]="true"
+                                [scrollbarH]="false"
+                                [summaryRow]="true"
+                                [summaryPosition]="'bottom'"
+                                >
+                                
+                                <ngx-datatable-column name="CONTAINER NO" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="REPAIR CODE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="CONTAINER NO" [width]="30"></ngx-datatable-column>
+                                <ngx-datatable-column name="SIZE" [width]="30"></ngx-datatable-column>
+                                <ngx-datatable-column name="EIR NO." [width]="40"></ngx-datatable-column>
+                                <ngx-datatable-column name="GRADE" [width]="40"></ngx-datatable-column>
+                                <ngx-datatable-column name="RESPONSIBILITY" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="TOTAL AMOUNT" [width]="50"></ngx-datatable-column>                                
+                                </ngx-datatable>                    
+                             </div>                                                      
+                        </div>
+                    </div><!-- COL END -->
+                </div>
+                <div class="row">
+                    <div class="col-sm-9"></div>
+                    <div class="col-sm-3 align-self-center">
+
+                        <ul class="pgpart">
+                            <li>
+                                <label for="">Items per page:</label>
+                                <div class="form-group mb-0 pgdrp">
+                                    <select name="" class="form-control mb-0" id="">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">40</option>
+                                        <option value="">60</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="pgnotaion">0 of 0</span>
+                                <ul class="pgnavigation">
+                                    <li>
+                                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- row closed  -->
+            </div>
+        </div>
+    </div>
+</section>

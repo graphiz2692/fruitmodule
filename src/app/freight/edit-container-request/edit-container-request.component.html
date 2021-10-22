@@ -1,0 +1,64 @@
+<br><br><br>
+<br><br>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Edit Container Request</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+  
+<form [formGroup]="editConReq">
+        <div class="row">
+            <div class="col-md-4">
+                
+                <mat-form-field  appearance="standard">
+                    <mat-label>REQUESTNO</mat-label>
+                    <input type="text" formControlName="REQUESTNO" matInput  >
+                  </mat-form-field>
+                
+              
+                
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field  appearance="standard">
+                    <mat-label>	SHIPPING AGENT</mat-label>
+                    <input type="text" formControlName="SHIPPINGAGENT" matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                
+                <mat-form-field  appearance="standard">
+                    <mat-label>	CONSIGNEE</mat-label>
+                    <input type="text" formControlName="CONSIGNEE" matInput  >
+                  </mat-form-field>
+              
+                
+            </div>
+        </div>
+
+      
+
+        <div class="row">
+            
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>HAULER NAME</mat-label>
+                    <input type="text" formControlName="HAULERNAME" matInput  >
+                  </mat-form-field>
+            </div>
+           
+        </div>
+    
+        <div class="row">
+         
+            <div class="col-md-12" align="right">
+                <div class="btn_top">
+                    <button mat-raised-button color="primary" (click)="edit()"><mat-icon>save</mat-icon> </button>
+                </div>
+            </div>
+          
+        </div>
+    </form>
+</mat-card-content>
+</mat-card>

@@ -1,0 +1,81 @@
+table {
+    width: 100%;
+    box-shadow: 0px 0px 0px;
+  }
+  .rgt-icns{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    
+  }
+  .rfesh,button{
+    margin-right: 5px;
+  }
+  .mt-top{
+      margin-top: 10px;
+  }
+  .normal_text{
+    font-size: 16px;
+  }
+  
+  mat-form-field{
+    width: 100%;
+  }
+  .mat-raised-button{
+    margin: 0;
+    min-width: 30px;
+    line-height: 36px;
+    padding: 0 7px;
+    margin-right: 5px;
+  }
+  .mat-icon {
+    height: 26px;
+    width: 21px;
+  }
+  mat-card{
+    border-radius: 15px;
+  }
+  .customer{
+    font-family: Roboto;
+    background-color: rgb(236, 235, 235);
+    font-size: 16px;
+    padding: 10px;
+    height: 40px;
+  }
+  .mt-40{
+    margin-top: 40px;
+  }
+  .party{
+    float: left;
+
+  }
+  .rightbutn{
+   
+  }
+  .mat-icon {
+   
+}
+.icn{
+  height: 20px !important;
+  width: 22px !important;
+  font-size: 18px !important;
+}
+
+.mat_btn{
+  min-width: 28px !important;
+  line-height: 14px !important;
+  padding: 0 4px !important;
+  margin-left: 10px;
+}
+.vessel{
+  background-color: rgb(236, 235, 235);
+    font-size: 16px;
+    padding: 10px;
+    height: 40px;
+    width:160px;
+}
+
+ 
+  

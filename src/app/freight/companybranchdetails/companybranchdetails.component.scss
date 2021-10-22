@@ -1,0 +1,50 @@
+.left{
+    width: 20%;
+    float: left;
+}
+.right{
+    width: 75%;
+    margin-left:2% ;
+    float: left;
+}
+.rgt-icns{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    
+  }
+  .rfesh{
+    margin-right: 5px;
+  }
+  mat-form-field{
+      width: 100%;
+  }
+  .main{
+      height:100%;
+  }
+
+
+ 
+
+.asrc{
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.mat-raised-button{
+
+    margin: 0;
+    min-width: 30px;
+    line-height: 36px;
+    padding: 0 7px;
+    margin-right: 5px;
+  }
+  .mat-icon {
+    height: 26px;
+    width: 21px;
+  }
+  mat-card{
+    border-radius: 15px;
+  }

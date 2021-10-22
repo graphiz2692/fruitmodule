@@ -1,0 +1,149 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">user list </li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+            User List
+            <span class="rgt-icns"> <button mat-raised-button color="primary" class="rfesh" (click)="openDialog()"> <mat-icon>add</mat-icon> </button>
+    
+               </span>
+          
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+
+       
+      
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>EMAIL ID</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>FULL NAME</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="standard">
+                    <mat-label> USERTYPE</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let item of user" [value]="item.value">
+                        {{item.value}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field appearance="standard">
+                    <mat-label> DESIGNATION</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let item of designtaion" [value]="item.value">
+                        {{item.value}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <button mat-raised-button color="primary" class="rfesh" > <mat-icon>search</mat-icon> </button>
+            </div>
+            
+       
+            
+        </div>
+       
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8 mt-top_shet">
+    
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+  
+                 
+  
+           <!-- EMAIL ID -->
+            <ng-container matColumnDef="EMAILID">
+              <th mat-header-cell *matHeaderCellDef>   EMAIL ID
+                   </th>
+              <td mat-cell *matCellDef="let element"> {{element.EMAILID}} </td>
+            </ng-container>
+  
+                <!-- FULL NAME-->
+                <ng-container matColumnDef="FULLNAME">
+                  <th mat-header-cell *matHeaderCellDef>FULL NAME </th>
+                  <td mat-cell *matCellDef="let element"> {{element.FULLNAME}} </td>
+                </ng-container>
+  
+                   <!-- DESIGNATION-->
+                   <ng-container matColumnDef="DESIGNATION">
+                      <th mat-header-cell *matHeaderCellDef>DESIGNATION </th>
+                      <td mat-cell *matCellDef="let element"> {{element.DESIGNATION}} </td>
+                    </ng-container>
+  
+                        <!--USER TYPE-->
+                   <ng-container matColumnDef="USERTYPE">
+                      <th mat-header-cell *matHeaderCellDef>USER TYPE</th>
+                      <td mat-cell *matCellDef="let element"> {{element.USERTYPE}} </td>
+                    </ng-container>
+
+
+                        <!--ACTION-->
+                   <ng-container matColumnDef="ACTION">
+                      <th mat-header-cell *matHeaderCellDef>ACTION</th>
+                      <td mat-cell *matCellDef="let element"> {{element.ACTION}} </td>
+                    </ng-container>
+  
+                       
+                       
+  
+     
+          
+        
+            
+          
+            <tr mat-header-row *matHeaderRowDef="col"></tr>
+            <tr mat-row *matRowDef="let row; columns: col;"></tr>
+            
+          </table>
+   
+        
+      </mat-card-content>
+    
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

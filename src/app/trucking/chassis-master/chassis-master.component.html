@@ -1,0 +1,134 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Trucking</a></li>
+            <li class="breadcrumb-item active" aria-current="page">ChassisMaster</li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+         ChassisMaster
+          
+           <span class="rgt-icns"> <button mat-raised-button color="primary" class="rfesh" (click)="openDialog()"> <mat-icon>add</mat-icon> </button>
+            <button mat-raised-button color="accent"> <mat-icon>autorenew</mat-icon> </button></span>
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+         <!-- CHASSISNO -->
+          <ng-container matColumnDef="CHASSISNO">
+            <th mat-header-cell *matHeaderCellDef>CHASSIS NO.
+                 </th>
+            <td mat-cell *matCellDef="let element"> {{element.CHASSISNO}} </td>
+          </ng-container>
+
+          <!-- REGNO-->
+          <ng-container matColumnDef="REGNO">
+            <th mat-header-cell *matHeaderCellDef> REG NO. </th>
+            <td mat-cell *matCellDef="let element"> {{element.REGNO}} </td>
+          </ng-container>
+        
+      
+        
+          <!-- MODALNO. -->
+          <ng-container matColumnDef="MODALNO">
+            <th mat-header-cell *matHeaderCellDef> MODAL NO. </th>
+            <td mat-cell *matCellDef="let element"> {{element.MODALNO}} </td>
+          </ng-container>
+          
+          <!-- HEIGHT-->
+          <ng-container matColumnDef="HEIGHT">
+            <th mat-header-cell *matHeaderCellDef> HEIGHT </th>
+            <td mat-cell *matCellDef="let element"> {{element.HEIGHT}} </td>
+          </ng-container>
+        
+        <!-- 	TYPE-->
+          <ng-container matColumnDef="TYPE">
+            <th mat-header-cell *matHeaderCellDef> TYPE</th>
+            <td mat-cell *matCellDef="let element"> {{element.TYPE}} </td>
+          </ng-container>
+        
+          <!-- BRANCH-->
+        <ng-container matColumnDef="BRANCH">
+            <th mat-header-cell *matHeaderCellDef> BRANCH</th>
+            <td mat-cell *matCellDef="let element"> {{element.BRANCH}} </td>
+          </ng-container>
+
+          <!-- OWNER-->
+          <ng-container matColumnDef="OWNER">
+            <th mat-header-cell *matHeaderCellDef>OWNER</th>
+            <td mat-cell *matCellDef="let element"> {{element.OWNER}} </td>
+          </ng-container>
+
+          <!-- 	ROADTAXEXPIRY-->
+          <ng-container matColumnDef="ROADTAXEXPIRY">
+            <th mat-header-cell *matHeaderCellDef> ROADTAXEXPIRY</th>
+            <td mat-cell *matCellDef="let element"> {{element.ROADTAXEXPIRY}} </td>
+          </ng-container>
+         
+          <!-- 	INSEXPIRY-->
+          <ng-container matColumnDef="INSEXPIRY">
+            <th mat-header-cell *matHeaderCellDef> INSEXPIRY</th>
+            <td mat-cell *matCellDef="let element"> {{element.INSEXPIRY}} </td>
+          </ng-container>
+       
+          <!--INSPECTION-->
+          <ng-container matColumnDef="INSPECTION">
+            <th mat-header-cell *matHeaderCellDef>INSPECTION</th>
+            <td mat-cell *matCellDef="let element"> {{element.INSPECTION}} </td>
+          </ng-container>
+       
+            <!-- 	STATUS-->
+            <ng-container matColumnDef="STATUS">
+                <th mat-header-cell *matHeaderCellDef>STATUS</th>
+                <td mat-cell *matCellDef="let element"> {{element.STATUS}}</td>
+              </ng-container>
+           
+                        <!-- 	ACTION-->
+                <ng-container matColumnDef="ACTION">
+                    <th mat-header-cell *matHeaderCellDef>ACTION</th>
+                <td mat-cell *matCellDef="let element"> {{element.ACTION}}</td>
+                </ng-container>
+                    
+        
+          <tr mat-header-row *matHeaderRowDef="col"></tr>
+          <tr mat-row *matRowDef="let row; columns: col;"></tr>
+          
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons 
+        aria-label="Select page of periodic elements">
+  </mat-paginator>
+      </mat-card-content>
+    
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

@@ -1,0 +1,136 @@
+
+
+    
+        
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Role
+        
+    
+      </mat-card-title>
+       
+    </mat-card-header>
+    <mat-card-content>
+  
+     
+<div class="row">
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>FULL NAME</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        
+    </div>
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>
+                USER ID
+                </mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>
+               IC NO
+                </mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>USER PASSWORD</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        
+    </div>
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>
+              EMAIL
+                </mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+    <div class="col-md-4">
+        <mat-form-field  appearance="standard">
+            <mat-label>
+             MOBILE NO
+                </mat-label>
+            <input matInput  >
+          </mat-form-field>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <mat-form-field appearance="standard">
+            <mat-label>DESIGNATION</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let item of designtaion" [value]="item.value">
+                {{item.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+    </div>
+    <div class="col-md-4">
+        <mat-form-field appearance="standard">
+            <mat-label>USER TYPE</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let item of user" [value]="item.value">
+                {{item.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <div class="col-md-4">
+        <mat-form-field appearance="standard">
+            <mat-label>BRANCH</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let item of branch" [value]="item.value">
+                {{item.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <mat-form-field appearance="standard">
+            <mat-label>ROLES</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let item of rols" [value]="item.value">
+                {{item.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+</div>
+<div class="row">
+    <div class="col" >
+        <span class=""> 
+            <button mat-raised-button color="primary" class="rfesh"  > <mat-icon>save</mat-icon> </button>
+          
+          
+         </span>   
+
+    </div>
+    <div class="col" align="right">
+        <button mat-raised-button color="primary" class="rfesh"  > <mat-icon>close</mat-icon> </button>
+    </div>
+</div>
+
+
+      
+    </mat-card-content>
+ 
+  </mat-card>
+

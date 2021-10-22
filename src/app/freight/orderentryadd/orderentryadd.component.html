@@ -1,0 +1,307 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+               
+    <div class="page-header_head">
+      <div>
+    
+          <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+              <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+              <li class="breadcrumb-item " ><a [routerLink]="['/freight/orderentry']">order entry</a></li>
+              <li class="breadcrumb-item active" aria-current="page">add order entry</li>
+          </ol>
+      </div>
+    
+    </div>
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+            GENERAL
+          
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+    
+       
+  <div class="row">
+      <div class="col-md-4">
+          <mat-form-field  appearance="standard">
+              <mat-label>ORDER NO.</mat-label>
+              <input matInput  >
+            </mat-form-field>
+          
+      </div>
+      <div class="col-md-4">
+          <mat-form-field appearance="standard">
+              <mat-label>OPEN DATE</mat-label>
+              <input matInput [matDatepicker]="quotaion">
+              <mat-datepicker-toggle matSuffix [for]="quotaion"></mat-datepicker-toggle>
+              <mat-datepicker #quotaion></mat-datepicker>
+            </mat-form-field>
+      </div>
+      <div class="col-md-4">
+          <mat-form-field  appearance="standard">
+              <mat-label>REFERENCE NO/JOB NO</mat-label>
+              <input matInput  >
+            </mat-form-field>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-4">
+        <mat-form-field appearance="standard">
+          <mat-label>TRANSPORT TYPE</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of transport" [value]="item.value">
+              {{item.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+          
+      </div>
+      <div class="col-md-4">
+      
+        <mat-form-field appearance="standard">
+          <mat-label>  SHIPMENT TYPE</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of shipment" [value]="item.value">
+              {{item.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4"> 
+        <mat-form-field appearance="standard">
+          <mat-label> JOB TYPE</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of job" [value]="item.value">
+              {{item.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-4">
+        <mat-form-field appearance="standard">
+          <mat-label> ORDER CATEGORY</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of catogery" [value]="item.value">
+              {{item.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+          
+      </div>
+  
+      <div class="col-md-4">
+        <mat-form-field appearance="standard">
+          <mat-label>INCO TERM</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of inco" [value]="item.value">
+              {{item.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mat-form-field  appearance="standard">
+        <mat-label>MASTER B/L NO.</mat-label>
+        <input matInput  >
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field  appearance="standard">
+        <mat-label>HOUSE B/L NO.</mat-label>
+        <input matInput  >
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field  appearance="standard">
+        <mat-label>MANIFEST NO.</mat-label>
+        <input matInput  >
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row mt-40">
+    <div class="col">
+      <h2 class="customer">CUSTOMER</h2>
+      <div class="row">
+        <div class="col">
+          <mat-form-field  appearance="standard">
+            <mat-label>CUSTOMER</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    
+      <div class="">
+        <h2 class="customer">NOTIFY PARTY
+          <span class="rightbutn">  <button mat-raised-button color="primary" class="rfesh mat_btn" > <mat-icon class="icn">add</mat-icon> </button></span>
+        </h2>
+       
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field  appearance="standard">
+            <mat-label>NOTIFY PARTY</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mt-40">
+    <div class="col">
+      <h2 class="customer">CONSIGNEE 
+        <span class="rightbutn">  <button mat-raised-button color="primary" class="rfesh mat_btn" > <mat-icon class="icn">add</mat-icon> </button></span>  </h2>
+      <div class="row">
+        <div class="col" align="right">
+          <mat-checkbox>SAME AS CUSTOMER</mat-checkbox>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field  appearance="standard">
+            <mat-label>CONSIGNEE / BUYER / IMPORTER </mat-label>
+            <input matInput  >
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    
+      <div class="">
+        <h2 class="customer">CONSIGNOR   
+          <span class="rightbutn">  <button mat-raised-button color="primary" class="rfesh mat_btn" > <mat-icon class="icn">add</mat-icon> </button></span>
+        </h2>
+       
+      </div>
+      <div class="row">
+        <div class="col" align="right">
+          <mat-checkbox>SAME AS CUSTOMER</mat-checkbox>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field  appearance="standard">
+            <mat-label>CONSIGNOR / EXPORTER / SELLER / SHIPPER</mat-label>
+            <input matInput  >
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+      <mat-form-field  appearance="standard">
+        <mat-label>CUSTOMS ACKNOWLEDGEMENT NO.</mat-label>
+        <input matInput  >
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <mat-form-field appearance="standard">
+        <mat-label> STOWAGE CODE</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let item of code" [value]="item.value">
+            {{item.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field appearance="standard">
+        <mat-label> CARGO CLASS</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let item of class" [value]="item.value">
+            {{item.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field  appearance="standard">
+        <mat-label>CARGO DESCRIPTION</mat-label>
+        <input matInput  >
+      </mat-form-field>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col">
+      <mat-form-field  appearance="standard">
+        <mat-label>EXTRA CARGO DESCRIPTION</mat-label>
+        <input matInput  >
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <h2 class="vessel">VESSEL DETAILS</h2>
+    </div>
+  </div>
+  
+  
+        
+      </mat-card-content>
+   
+    </mat-card>
+  
+  
+   
+  
+   
+  
+  
+  
+  
+   
+          
+        <mat-card class="mt-top">
+        
+            <mat-card-content>
+              <div class="row">
+                <div class="col">
+               <button mat-raised-button color="primary"> <mat-icon>save</mat-icon> SAVE </button>
+               <button mat-raised-button color="warn"> <mat-icon>print</mat-icon> PRINT </button>
+               <button mat-raised-button color="accent"> <mat-icon>content_copy</mat-icon> CLONE </button>
+                </div>
+                <div class="col" align="right">
+                  <button mat-raised-button color="primary"> <mat-icon>fast_rewind</mat-icon> BACK </button>
+                  <button mat-raised-button> CLEAR </button>
+                </div>
+            </div>
+              
+            </mat-card-content>
+         
+          </mat-card>
+  
+    
+  
+  </div>
+  </div>
+  </div>
+  </section>
+  

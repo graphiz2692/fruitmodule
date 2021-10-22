@@ -1,0 +1,107 @@
+
+
+
+
+
+
+
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">vessel list</li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Vessel List
+          
+           <span class="rgt-icns"> <button mat-raised-button color="primary" class="rfesh" (click)="openDialog()"> <mat-icon>add</mat-icon> </button>
+            <button mat-raised-button color="warn" class="rfesh"> <mat-icon>cached</mat-icon> </button>
+            <button mat-raised-button color="accent"> <mat-icon>exit_to_app</mat-icon> </button></span>
+           
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    
+       
+           <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>   ACTION
+                 </th>
+            <td mat-cell *matCellDef="let element"><a [routerLink]="['/freight/editVesselDetails',element.id]" mat-button color="primary"><mat-icon>edit</mat-icon></a>
+              <button mat-button color="accent"><mat-icon>delete</mat-icon></button>
+            </td>
+          </ng-container>
+
+       
+          <ng-container matColumnDef="VESSELID">
+            <th mat-header-cell *matHeaderCellDef> VESSEL ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.VESSELID}} </td>
+          </ng-container>
+        
+      
+        
+
+          <ng-container matColumnDef="VESSELNAME">
+            <th mat-header-cell *matHeaderCellDef> VESSEL NAME </th>
+            <td mat-cell *matCellDef="let element"> {{element.VESSELNAME}} </td>
+          </ng-container>
+        
+        
+          <ng-container matColumnDef="VESSELTYPE">
+            <th mat-header-cell *matHeaderCellDef> VESSEL TYPE </th>
+            <td mat-cell *matCellDef="let element"> {{element.VESSELTYPE}} </td>
+          </ng-container>
+        
+    
+          <ng-container matColumnDef="CALLSIGNNO">
+            <th mat-header-cell *matHeaderCellDef> CALL SIGN NO </th>
+            <td mat-cell *matCellDef="let element"> {{element.CALLSIGNNO}} </td>
+          </ng-container>
+
+
+      
+       
+  
+        
+       
+          
+        
+          <tr mat-header-row *matHeaderRowDef="col"></tr>
+          <tr mat-row *matRowDef="let row; columns: col;"></tr>
+          
+        </table>
+        
+      </mat-card-content>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons 
+      aria-label="Select page of periodic elements">
+</mat-paginator>
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

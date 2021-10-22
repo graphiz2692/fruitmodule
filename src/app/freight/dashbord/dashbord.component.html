@@ -1,0 +1,57 @@
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>ORDER NO.</mat-label>
+                    <input matInput placeholder="Ex. Order No" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+            
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>Date From</mat-label>
+                    <input matInput [matDatepicker]="datepicker" placeholder="01/09/2021">
+                    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker></mat-datepicker>
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>Date To</mat-label>
+                    <input matInput [matDatepicker]="to" placeholder="30/09/2021">
+                    <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+                    <mat-datepicker #to></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>HAULIER NAME</mat-label>
+                    <input matInput placeholder="Ex. Haulier name" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>SHIPPING AGENT</mat-label>
+                    <input matInput placeholder="Ex. Shipping Agent" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>
+                        CONSIGNEE</mat-label>
+                    <input matInput placeholder="Ex. Consignee" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="btn_top">
+                    <button mat-raised-button color="primary"> <mat-icon>search</mat-icon> SEARCH</button>
+                </div>
+            </div>
+        </div>

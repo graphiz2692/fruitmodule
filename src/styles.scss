@@ -1,0 +1,342 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/app_styles.scss";
+@import "assets/plugins/web-fonts/icons.css";
+@import "assets/plugins/web-fonts/font-awesome/font-awesome.min.css";
+@import "assets/plugins/web-fonts/plugin.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+a,p,span,label,h1,h2,h3,h4,h5,h6{font-family: 'Titillium Web', sans-serif !important;}
+
+.bodysection{padding-top: 67px;}
+// .form-control:focus{border-bottom:1px solid gray!important; border-top:1px solid transparent!important; border-left:1px solid transparent!important; border-right:1px solid transparent!important;}
+.breadcrumb{padding: 0;background-color: transparent;}
+.breadcrumb .breadcrumb-item > a{font-size: 12px;}
+.breadcrumb-item.active{font-size: 12px;}
+.page-header_head{margin: 6px 0 !important;}
+
+table > tr > td{font-family: 'Titillium Web', sans-serif;}
+table > tr > th{font-family: 'Titillium Web', sans-serif;}
+#collapseExample > .card{
+    -webkit-box-shadow: 21px 139px 90px 103px rgb(224 224 224 / 51%) !important;
+       -moz-box-shadow: 21px 139px 90px 103px rgb(224 224 224 / 51%) !important;
+       box-shadow: 21px 139px 90px 103px rgb(224 224 224 / 51%) !important;
+   }
+   .titleheadercard{padding: 9px 12px;}
+   .main-content-label{
+    margin: 0;
+    line-height: 28px;
+    font-weight: 600;
+    color: #303030;
+   }
+//  drop down list control css
+
+   ::ng-deep {
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+
+    .main-header .dropdown-menu.show {
+        top: 48px !important;
+        left: auto !important;
+    }
+    .side-header .main-profile-menu .dropdown-menu {
+        top: 53px !important;
+    }
+    .main-header-center .form-control.ng-select {
+        width: 160px !important;
+    }
+
+    .ng-select{
+        padding: 0;
+    }
+
+    .ng-select .ng-select-container {
+        border: none;
+        color: #a8afc7;
+    }
+    .dark-theme .ng-select.ng-select-opened > .ng-select-container {
+        background: #252542;
+        border-color: #b3b3b3 #ccc #d9d9d9;
+    }
+    .ng-select .ng-select-container .ng-value-container .ng-placeholder {
+        color: #a8afc7;
+    }
+    .ng-select .ng-select-container:hover {
+        box-shadow: none;
+    }
+    .ng-select.ng-select-opened .ng-select-container,
+    .ng-dropdown-panel{
+        z-index: 9 !important;
+    }
+    
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+        background-color: #f8f9ff;
+        color: #6259ca;
+    }
+    .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+        border-color: none;
+        box-shadow: none;
+    }
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected .ng-option-label,
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked .ng-option-label {
+        font-weight: 400;
+    }
+    .rating .fas.fa-star,
+    .user-info-rating .far.fa-star,
+    .fe.fe-star,
+    .fa.fa-star{
+        letter-spacing: 3px;
+    }
+
+    .accordion .card-header button {
+        width: 100%;
+        text-align: left;
+    }
+
+    .toast-header small{
+        margin-left: 50%;
+    }
+    
+
+    .hljs{
+        background: none;
+        color: inherit;
+        
+    }
+    .leaflet-container{
+        z-index: 0 !important;
+    }
+}
+
+.ng-select.ng-select-single .ng-select-container{min-height: 27px;}
+.ng-select.ng-select-single .ng-select-container{height: 30px;}
+// css end here drop down
+
+.no-gutter {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  
+  .no-gutter > [class*="col-"] {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .no-gutter-padd {
+    margin-right:0;
+    margin-left: 0;
+  }
+  
+  .no-gutter-padd > [class*="col-"] {
+    padding-right:0;
+    padding-left: 0;
+  }
+
+
+.btn-table{
+    padding: 3px 6px;
+}
+.table {    margin-bottom: 7px !important;}
+.form-group {
+  
+    margin-bottom: 10px !important;
+}
+
+.form-group > label {    font-size: 12px;
+    margin-bottom: 0.2rem  !important;
+}
+
+.form-control{
+    height: 31px;
+    font-size: 12px;
+}
+.modal-header{padding: 9px 15px;}
+.modal-body{padding: 9px 15px;}
+.modal-footer > .btn{
+    padding: 0 5px;
+    font-size: 13px;
+ 
+    min-height: 31px;
+}
+.modal-footer{padding: 9px 12px;}
+
+
+.cardmodel{
+    
+    border: 1px solid #80808014;
+    padding: 12px 12px;
+    border-radius: 5px;
+    background-color: #80808008;
+}
+.modalbodyhead{font-size: 18px; margin: 12px 0;font-weight: bold;color: gray;}
+.dltmdltxt{color: #6259ca;}
+
+.grpinin{
+    display: inline-block;
+    width: 170px;
+    margin-right: 9px;
+    margin-bottom: 0 !important;
+display: table;
+}
+.grpinin > label{display: inline-block;}
+.drpw100{width: 100%  !important;}
+#collapseExample{z-index: 10;}
+#collapseExample > button{font-size: 12px;} 
+.collaps-contorls-sear{font-size: 12px !important; }
+.collaps-contorls-reset{font-size: 12px !important;}
+.collapseExample-adj{width: 50%;right: 0;}
+.btnchar{
+    min-height: 30px;
+    font-size: 12px;
+    padding: 2px 8px;
+}
+
+.collapseExample-adj25{width: 25%;right: 0;}
+
+
+
+.floating-form {
+    width:320px;
+  }
+  
+  /****  floating-Lable style start ****/
+  .floating-label { 
+    position:relative; 
+    margin-bottom:18px; 
+  }
+  .floating-input , .floating-select {
+    font-size:14px;
+    padding:4px 4px;
+    display:block;
+    width:100%;
+    height:30px;
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  
+  .floating-input:focus , .floating-select:focus {
+       outline:none;
+       border-bottom:2px solid #5264AE; 
+  }
+  
+//   label {
+//     color:#999; 
+//     font-size:14px;
+//     font-weight:normal;
+//     position:absolute;
+//     pointer-events:none;
+//     left:5px;
+//     top:5px;
+//     transition:0.2s ease all; 
+//     -moz-transition:0.2s ease all; 
+//     -webkit-transition:0.2s ease all;
+//   }
+  
+  .floating-input:focus ~ label, .floating-input:not(:placeholder-shown) ~ label {
+    top: -9px;
+    font-size: 10px;
+    color: #303030;
+  }
+  
+  .floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
+    top: -9px;
+    font-size: 10px;
+    color: #303030;
+  }
+  
+  /* active state */
+  .floating-input:focus ~ .bar:before, .floating-input:focus ~ .bar:after, .floating-select:focus ~ .bar:before, .floating-select:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  *, *:before, *:after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  
+  .floating-textarea {
+     min-height: 30px;
+     max-height: 260px; 
+     overflow:hidden;
+    overflow-x: hidden; 
+  }
+  
+  /* highlighter */
+  .highlight {
+    position:absolute;
+    height:50%; 
+    width:100%; 
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    top:15%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  .floating-input:focus ~ .highlight , .floating-select:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* animation */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  
+  /****  floating-Lable style end ****/
+  
+  
+  
+
+  #ngb-panel-0-header > button{
+    display: block;
+    padding: 6px 20px !important;
+    position: relative;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    background-color: #e1e1f9;
+    font-weight: bold !important;
+    width: 100% !important;
+    text-align: left !important;
+    border-radius: 0 !important;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  /***   daniel - Fork me friend - style   ***/
+  .floating-credit { position:fixed; bottom:10px;right:10px; color:#aaa; font-size:13px;font-family:arial,sans-serif; }
+  .floating-credit a { text-decoration:none; color:#000000; font-weight:bold; }
+  .floating-credit a:hover { border-bottom:1px dotted #f8f8f8; }
+  .floating-heading { position:fixed; color:#aaa; font-size:20px; font-family:arial,sans-serif; }
+  /***  daniel - Fork me friend - style  ***/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

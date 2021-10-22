@@ -1,0 +1,23 @@
+.rgt-icns{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
+    
+  }
+
+  .mat-raised-button,.mat-stroked-button,.mat-button{
+
+    margin: 0;
+    min-width: 30px;
+    line-height: 36px;
+    padding: 0 7px;
+    margin-right: 5px;
+  }
+  .mat-icon {
+    height: 26px;
+    width: 21px;
+  }
+  mat-card{
+    border-radius: 15px;
+  }

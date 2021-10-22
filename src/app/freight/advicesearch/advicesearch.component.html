@@ -1,0 +1,111 @@
+<h1 mat-dialog-title>Advanced Search</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                
+                <mat-form-field appearance="standard">
+                    <mat-label>FILTER BY</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let item of filtered" [value]="item.value">
+                        {{item.value}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                
+              
+                
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field appearance="standard">
+                    <mat-label>MOVEMENT STATUS</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let item of status" [value]="item">
+                        {{item}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                
+                <mat-form-field appearance="standard">
+                    <mat-label>TRAILER TYPE</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let item of trailerType" [value]="item">
+                        {{item}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field> 
+              
+                
+            </div>
+        </div>
+
+      
+
+        <div class="row">
+            
+            <div class="col-md-4">
+              
+                <mat-form-field  appearance="standard">
+                    <mat-label>ORDER NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-4">
+
+                <mat-form-field  appearance="standard">
+                    <mat-label>CONTAINER NO.</mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-4">
+               
+                <mat-form-field  appearance="standard">
+                    <mat-label>LINER REF.</mat-label>
+                    <input matInput >
+                </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>PICKUP FROM</mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                              </div>
+            <div class="col-md-4">
+            
+                <mat-form-field  appearance="standard">
+                    <mat-label>DELIVER TO</mat-label>
+                    <input matInput >
+                  </mat-form-field>
+                  
+             
+                          
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>PICKUP AREA</mat-label>
+                    <input matInput >
+                  </mat-form-field>
+            </div>
+       
+        </div>
+        
+
+        <div class="row">
+         
+            <div class="col-md-12" align="right">
+                <div class="btn_top">
+                    <button mat-raised-button color="primary"> <mat-icon>search</mat-icon> </button>
+                </div>
+            </div>
+          
+        </div>
+
+      

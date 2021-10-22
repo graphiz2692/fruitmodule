@@ -1,0 +1,60 @@
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">vessel schedule</li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Vessel Schedule
+          
+           <span class="rgt-icns"> <button mat-raised-button color="primary" class="rfesh" (click)="openDialog()"> <mat-icon>search</mat-icon> </button>
+            <button mat-raised-button color="accent"> <mat-icon>exit_to_app</mat-icon> </button></span>
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+        
+        <mat-form-field appearance="standard">
+            <mat-label>COUNTRY</mat-label>
+            <mat-select >
+              <mat-option>None</mat-option>
+              <mat-option value="option1">INDIA</mat-option>
+              <mat-option value="option2">USA</mat-option>
+              <mat-option value="option3">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+            
+            
+          <mat-form-field appearance="standard" >
+            <mat-label>PORT</mat-label>
+            <mat-select >
+              <mat-option>None</mat-option>
+              <mat-option val="op">Option 1</mat-option>
+              <mat-option val="op">Option 2</mat-option>
+              <mat-option val="op">Option 3</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <br>
+        
+        <full-calendar [options]="calendarOptions"></full-calendar>
+    </mat-card-content>
+    </mat-card>
+    </div>
+        </div>
+        </div>
+        </section>
+        

@@ -1,0 +1,129 @@
+
+<link href="https://angular.spruko.com/spruha/ltr/horizontal-light/styles.d61f92d25e19a2f9b88e.css" rel="stylesheet" />
+<!-- <app-navbar></app-navbar> -->
+<div class="page main-signin-wrapper">
+ 
+
+
+    <div class="container">
+        <div class="row      text-center">
+            <div class="col-md-12">
+                <div class="">
+                    <div class="row  ">
+                        <div class="col-lg-7 align-self-center">
+
+                            <app-bslider></app-bslider>
+
+
+                        </div>
+                        <div class="col-lg-5 align-self-center  login_form ">
+
+                            <div class="loginhd-wrap">
+                                <h5 class="text-left m-0">Login</h5>
+                            </div>
+                            <div class="card cardcustom">
+                                <div class="container-fluid">
+                                 
+                                    <div class="row row-sm">
+
+                                        <div class="col-sm-12">
+                                         
+                                        </div>
+                                        <div class="card-body mb-2 pt-2">
+                                            
+                                            <div class="clearfix"></div>
+                                            <form [formGroup]="loginForm" (ngSubmit)="Submit()" novalidate>
+
+                                            
+
+
+                                                <div class="form-group text-left">
+                                                    <label>User Id</label>
+                                                    <input class="form-control form-controlcustom "
+                                                        formControlName="username" type="text">
+                                                    <div *ngIf="(loginFormControl.username.touched || submitted) && (loginFormControl.username.errors?.required)"
+                                                        class="tx-danger">
+                                                        <small>Enter admin to login</small>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group text-left">
+                                                    <label>Password</label>
+                                                    <input class="form-control form-controlcustom "
+                                                        formControlName="password" type="password">
+                                                    <div *ngIf="(loginFormControl.password.touched || submitted) && (loginFormControl.password.errors?.required)"
+                                                        class="tx-danger">
+                                                        <small>Enter above password</small>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <div class="input-group-btn search-panel">
+                                                        <select placeholder="All companies"
+                                                            class="form-control form-controlcustom  p-0">
+                                                            <option *ngFor="let company of companies"
+                                                                [value]="company.id">
+                                                                {{company.name}}
+                                                            </option>
+                                                        </select>
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <div class="input-group-btn search-panel">
+                                                        <select placeholder="All branches"
+                                                            class="form-control form-controlcustom  p-0">
+                                                            <option *ngFor="let branch of branches" [value]="branch.id">
+                                                                {{branch.name}}
+                                                            </option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                              
+
+
+                                                <div class="form-group">
+                                                    <div class="input-group-btn search-panel">
+                                                        <select placeholder="All yards"
+                                                            class="form-control form-controlcustom  p-0">
+                                                            <option *ngFor="let yard of yards" [value]="yard.id">
+                                                                {{yard.name}}
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                          
+
+                                            
+                                            <div class="row mt-4">
+                                                <div class="col-sm-6 align-self-center">
+                                                    <div class="text-left ">
+                                                        <div class=""><a href="javascript:;">Change Password</a></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 align-self-center">
+                                                    <button class="btn ripple btn-main-scuess btn-success btn-block"
+                                                        [disabled]="!loginForm.valid">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Row -->
+
+</div>

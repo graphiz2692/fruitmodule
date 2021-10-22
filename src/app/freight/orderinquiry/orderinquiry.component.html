@@ -1,0 +1,190 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">order inquiry </li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+            Order Inquiry
+          
+           <span class="rgt-icns"> 
+               <button mat-raised-button color="primary" class="rfesh"  > <mat-icon>refresh</mat-icon> </button>
+            </span>   
+
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+
+       
+      
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>ORDER NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>MANIFEST NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label> OCEAN B/L NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label> HOUSE B/L NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field  appearance="standard">
+                    <mat-label>   VOYAGE NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label> DATE FROM</mat-label>
+                    <input matInput [matDatepicker]="from" placeholder="01/09/2021">
+                    <mat-datepicker-toggle matSuffix [for]="from"></mat-datepicker-toggle>
+                    <mat-datepicker #from></mat-datepicker>
+                  </mat-form-field>
+            </div>
+       
+            
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label> DATE TO</mat-label>
+                    <input matInput [matDatepicker]="to" placeholder="01/09/2021">
+                    <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+                    <mat-datepicker #to></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <div class="btn_top">
+                    <button mat-raised-button color="primary"> <mat-icon>search</mat-icon> </button>
+                </div>
+            </div>
+        </div>
+    
+
+     
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8 mt-top_shet">
+    
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+
+               
+
+         <!-- ORDER NO. -->
+          <ng-container matColumnDef="ORDERNO">
+            <th mat-header-cell *matHeaderCellDef>   ORDER NO.
+                 </th>
+            <td mat-cell *matCellDef="let element"> {{element.ORDERNO}} </td>
+          </ng-container>
+
+              <!-- VESSEL NAME-->
+              <ng-container matColumnDef="VESSELNAME">
+                <th mat-header-cell *matHeaderCellDef>VESSEL NAME </th>
+                <td mat-cell *matCellDef="let element"> {{element.VESSELNAME}} </td>
+              </ng-container>
+
+                 <!-- VOYAGE NO-->
+                 <ng-container matColumnDef="VOYAGENO">
+                    <th mat-header-cell *matHeaderCellDef>VOYAGE NO </th>
+                    <td mat-cell *matCellDef="let element"> {{element.VOYAGENO}} </td>
+                  </ng-container>
+
+                      <!--HOUSE B/L NO.-->
+                 <ng-container matColumnDef="HOUSEBLNO">
+                    <th mat-header-cell *matHeaderCellDef>HOUSE B/L NO.</th>
+                    <td mat-cell *matCellDef="let element"> {{element.HOUSEBLNO}} </td>
+                  </ng-container>
+
+                      <!--MANIFEST NO.-->
+                 <ng-container matColumnDef="MANIFESTNO">
+                    <th mat-header-cell *matHeaderCellDef>MANIFEST NO.</th>
+                    <td mat-cell *matCellDef="let element"> {{element.MANIFESTNO}} </td>
+                  </ng-container>
+
+
+                      <!--SHIPPER NAME-->
+                 <ng-container matColumnDef="SHIPPERNAME">
+                    <th mat-header-cell *matHeaderCellDef>SHIPPER NAME</th>
+                    <td mat-cell *matCellDef="let element"> {{element.SHIPPERNAME}} </td>
+                  </ng-container>
+
+
+                      <!--CONSIGNEE NAME-->
+                 <ng-container matColumnDef="CONSIGNEENAME">
+                    <th mat-header-cell *matHeaderCellDef>CONSIGNEE NAME</th>
+                    <td mat-cell *matCellDef="let element"> {{element.CONSIGNEENAME}} </td>
+                  </ng-container>
+
+
+                      <!--ORDER DATE-->
+                 <ng-container matColumnDef="ORDERDATE">
+                    <th mat-header-cell *matHeaderCellDef>ORDER DATE</th>
+                    <td mat-cell *matCellDef="let element"> {{element.ORDERDATE}} </td>
+                  </ng-container>
+
+                     
+
+   
+        
+      
+          
+        
+          <tr mat-header-row *matHeaderRowDef="col"></tr>
+          <tr mat-row *matRowDef="let row; columns: col;"></tr>
+          
+        </table>
+        
+      </mat-card-content>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons 
+      aria-label="Select page of periodic elements">
+</mat-paginator>
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

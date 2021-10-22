@@ -1,0 +1,382 @@
+ 
+<app-navbar></app-navbar>
+
+<section class="bodysection">
+    <div class="container-fluid ">
+
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Page Header -->
+                <div class="page-header_head">
+                    <div>
+
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Masterdata</li>
+                            <li class="breadcrumb-item active" aria-current="page">  Container Status</li>
+                        </ol>
+                    </div>
+
+                </div>
+                <!-- End Page Header -->
+
+                <!--Row-->
+                <div class="row row-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 grid-margin">
+                        <div class="card custom-card">
+                            <div class="card-header border-bottom-0 titleheadercard">
+
+
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label class="main-content-label"> Container Status </label>
+                                    </div>
+                                    <div class="col-sm-3">
+
+                                    </div>
+
+                                    <div class="col-sm-5">
+                                        <div class="no-gutter-padd row">
+                                            <div class="col-sm-3"></div>
+
+                                            <div class="col-sm-3 text-right align-self-center">
+                                                <label class="mr-1 mb-0">Filter</label>
+                                            </div>
+                                            <div class="col-sm-4 align-self-center ">
+                                                <div class="form-group grpinin">
+
+                                                    <ng-select name="country" class="form-control p-0 lin-feild">
+                                                        <ng-option value="">Ft-Stock Cstegory</ng-option>
+                                                        <ng-option value="cz">Module</ng-option>
+                                                        <ng-option value="de">trnbillingunit</ng-option>
+
+                                                    </ng-select>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-1 text-center align-self-center">
+                                                <button type="button" class="btn btn-sm card-contorls mr-1"
+                                                    (click)="LargeOpen1(largemodal1)">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+
+                                            <div class="col-sm-1 text-center align-self-center">
+
+                                                <button type="button" class="btn btn-sm card-contorls mr-1">
+                                                    <i class="fa fa-refresh"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+ 
+
+                            </div>
+
+
+                            <div class="table-responsive border userlist-table">
+                                <table class="table card-table table-striped table-vcenter text-nowrap mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="wd-lg-8p"><span>CODE</span></th>
+                                            <th class="wd-lg-20p"><span> DESCRIPTION</span></th>
+                                            <th class="wd-lg-20p"><span> HOLD STATUS</span></th>
+                                           
+                                           
+                                            <th class="wd-lg-20p"><span>ACTIVE</span></th>
+                                            <th class="wd-lg-20p"><span>ACTION</span></th>
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>56
+
+                                            </td>
+                                            <td> 	FIFTY SIX</td>
+                                            <td>
+                                                <label class="ckbox">
+                                                    <input type="checkbox" checked >
+                                                    <span></span>
+                                                </label>
+                                            </td>
+ 
+
+                                            <td>
+
+                                                <label class="ckbox">
+                                                    <input type="checkbox" checked>
+                                                    <span></span>
+                                                </label>
+                                            </td>
+
+
+
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-info mr-1 btn-table"
+                                                (click)="LargeOpen2(largemodal2)">
+                                                <i class="fe fe-edit-2"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-sm btn-danger btn-table "
+                                                (click)="LargeOpen3(largemodal3)">
+                                                <i class="fe fe-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>56
+
+                                            </td>
+                                            <td> 	FIFTY SIX</td>
+                                            <td>
+                                                <label class="ckbox">
+                                                    <input type="checkbox"  >
+                                                    <span></span>
+                                                </label>
+                                            </td>
+ 
+
+                                            <td>
+
+                                                <label class="ckbox">
+                                                    <input type="checkbox" checked>
+                                                    <span></span>
+                                                </label>
+                                            </td>
+
+
+
+                                            <td>
+
+                                                <button type="button" class="btn btn-sm btn-info mr-1 btn-table"
+                                                (click)="LargeOpen2(largemodal2)">
+                                                <i class="fe fe-edit-2"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-sm btn-danger btn-table "
+                                                (click)="LargeOpen3(largemodal3)">
+                                                <i class="fe fe-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>56
+
+                                            </td>
+                                            <td> 	FIFTY SIX</td>
+                                            <td>
+                                                <label class="ckbox">
+                                                    <input type="checkbox"  checked>
+                                                    <span></span>
+                                                </label>
+                                            </td>
+ 
+
+                                            <td>
+
+                                                <label class="ckbox">
+                                                    <input type="checkbox" checked>
+                                                    <span></span>
+                                                </label>
+                                            </td>
+
+
+
+                                            <td>
+
+                                                <button type="button" class="btn btn-sm btn-info mr-1 btn-table"
+                                                (click)="LargeOpen2(largemodal2)">
+                                                <i class="fe fe-edit-2"></i>
+                                                </button>
+
+                                                <button type="button" class="btn btn-sm btn-danger btn-table "
+                                                (click)="LargeOpen3(largemodal3)">
+                                                <i class="fe fe-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+ 
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-9"></div>
+                                <div class="col-sm-3 align-self-center">
+
+                                    <ul class="pgpart">
+                                        <li>
+                                            <label for="">Items per page:</label>
+                                            <div class="form-group mb-0 pgdrp">
+                                                <select name="" class="form-control mb-0" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">20</option>
+                                                    <option value="">40</option>
+                                                    <option value="">60</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="pgnotaion">0 of 0</span>
+                                            <ul class="pgnavigation">
+                                                <li>
+                                                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div><!-- COL END -->
+                </div>
+                <!-- row closed  -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<ng-template #largemodal1 let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title"> Container Status Detail</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+       
+        <div class="row">
+            <div class="col-sm-7 align-self-center">
+                
+                <div class="form-group">
+                    <label for="">Code</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Enter Code" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 align-self-center">
+            
+                <div class="form-group mt-3">
+                    <label class="ckbox"><input type="checkbox"><span>Hold</span></label>
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="">Desription</label>
+
+                    <textarea name="" id="" cols="30" rows="3" class="form-control"
+                    name="example-text-input"
+                    placeholder="Default Input"></textarea>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Cancel</button>
+    </div>
+</ng-template>
+
+<ng-template #largemodal2 let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title">Edit Container Status Detail</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+       
+        <div class="row">
+            <div class="col-sm-7 align-self-center">
+                
+                <div class="form-group">
+                    <label for="">Code</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Enter Code" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 align-self-center">
+            
+                <div class="form-group mt-3">
+                    <label class="ckbox"><input type="checkbox"><span>Hold</span></label>
+                </div>
+            </div>
+            
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="">Desription</label>
+
+                    <textarea name="" id="" cols="30" rows="3" class="form-control"
+                    name="example-text-input"
+                    placeholder="Default Input"></textarea>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Cancel</button>
+    </div>
+</ng-template>
+
+
+<ng-template #largemodal3 let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title">  </h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+        <div class="no-gutter row">
+            <div class="col-sm-12 text-center">
+        
+                <h5 class="dltmdltxt">Are you sure you want to Delete ?</h5>
+        
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer" style="display: block;">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <button class="btn ripple btn-primary" type="button">Save</button>
+            </div>
+            <div class="col-sm-6 text-right">
+
+                <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Cancel</button>
+            </div>
+        </div>
+      
+      
+    </div>
+</ng-template>

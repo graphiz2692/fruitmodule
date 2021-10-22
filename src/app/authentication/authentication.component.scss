@@ -1,0 +1,25 @@
+.mobileIcon{
+    display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 786px) {
+    .mobileIcon{
+        display: block;
+    }
+    .deskIcon{
+        display: none;
+    }
+}
+
+.form-controlcustom{border-bottom: 1px solid #6259ca;border-radius: 0 !important; border-left: 1px solid transparent;border-right: 1px solid transparent;border-top: 1px solid transparent;}
+
+.loginhd-wrap{
+    
+    background-color: #e8e8e8;
+    border-bottom: 1px solid #dedddd;
+    padding: 12px 12px;
+    border-top: 1px solid #dedddd;
+
+}
+.cardcustom{    border-radius: 0px 0px 11px 11px;}
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option{text-align: left;}

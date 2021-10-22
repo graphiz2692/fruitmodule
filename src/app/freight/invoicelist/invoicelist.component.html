@@ -1,0 +1,143 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">invoicelist </li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+            Customer Invoice list
+          
+           <span class="rgt-icns"> 
+               <button mat-raised-button color="primary" class="rfesh"  > <mat-icon>refresh</mat-icon> </button>
+            </span>   
+
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+
+
+      
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>INVOICE NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label> INVOICE DATE</mat-label>
+                    <input matInput [matDatepicker]="invoice" placeholder="01/09/2021">
+                    <mat-datepicker-toggle matSuffix [for]="invoice"></mat-datepicker-toggle>
+                    <mat-datepicker #invoice></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label> DATE FROM</mat-label>
+                    <input matInput [matDatepicker]="from" placeholder="01/09/2021">
+                    <mat-datepicker-toggle matSuffix [for]="from"></mat-datepicker-toggle>
+                    <mat-datepicker #from></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label> DATE TO</mat-label>
+                    <input matInput [matDatepicker]="to" placeholder="01/09/2021">
+                    <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+                    <mat-datepicker #to></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <div class="btn_top">
+                    <button mat-raised-button color="primary"> <mat-icon>search</mat-icon> </button>
+                </div>
+            </div>
+            
+        </div>
+    
+
+     
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8 mt-top_shet">
+    
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+
+               
+
+         <!-- ACTION -->
+          <ng-container matColumnDef="ACTION">
+            <th mat-header-cell *matHeaderCellDef>    ACTION
+                 </th>
+            <td mat-cell *matCellDef="let element"> {{element.ACTION}} </td>
+          </ng-container>
+
+              <!-- INVOICE NO.-->
+              <ng-container matColumnDef="INVOICENO">
+                <th mat-header-cell *matHeaderCellDef>INVOICE NO. </th>
+                <td mat-cell *matCellDef="let element"> {{element.INVOICENO}} </td>
+              </ng-container>
+
+                 <!-- INVOICE DATE-->
+                 <ng-container matColumnDef="INVOICEDATE">
+                    <th mat-header-cell *matHeaderCellDef> INVOICE DATE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.INVOICEDATE}} </td>
+                  </ng-container>
+
+                      <!--CUSTOMER  NAME-->
+                 <ng-container matColumnDef="CUSTOMERNAME">
+                    <th mat-header-cell *matHeaderCellDef>CUSTOMER  NAME</th>
+                    <td mat-cell *matCellDef="let element"> {{element.CUSTOMERNAME}} </td>
+                  </ng-container>
+
+                     
+
+   
+        
+      
+          
+        
+          <tr mat-header-row *matHeaderRowDef="col"></tr>
+          <tr mat-row *matRowDef="let row; columns: col;"></tr>
+          
+        </table>
+        
+      </mat-card-content>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons 
+      aria-label="Select page of periodic elements">
+</mat-paginator>
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

@@ -1,0 +1,139 @@
+<div class="row chassis">
+    <div class="col">
+        <p class="chassis_txt">CHASSIS DETAILS</p>
+    </div>
+</div>
+        <div class="row  chassis_contnt">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>CHASSIS NO.</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+            
+                <mat-form-field appearance="standard" class="example-full-width">
+                    <mat-label>BRANCH ID</mat-label>
+                    <mat-select>
+                      <mat-option value="1">1</mat-option>
+                      <mat-option value="2">2</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>ROADTAXEXPIRY</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row chassis_contnt">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>REGISTRATION NO.</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+            
+             
+                <mat-form-field appearance="standard" class="example-full-width">
+                    <mat-label>STATUS</mat-label>
+                    <mat-select>
+                      <mat-option value="AVAILABLE">AVAILABLE</mat-option>
+                      <mat-option value="NOT AVAILABLE">NOT AVAILABLE</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>INSURANCE EXPIRY</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row chassis_contnt">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>CURRENT LOCATION</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>MODAL NO.</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>OWNERSHIP</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+        </div>
+<div class="row chassis_contnt">
+    <div class="col-md-4">
+        <mat-form-field class="example-full-width" appearance="standard">
+            <mat-label>INSPECTION</mat-label>
+            <input matInput [matDatepicker]="to" placeholder="30/09/2021">
+            <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+            <mat-datepicker #to></mat-datepicker>
+          </mat-form-field>
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field appearance="standard" class="example-full-width">
+                    <mat-label>CHASSIS SIZE</mat-label>
+                    <mat-select>
+                      <mat-option value="123">123</mat-option>
+                      <mat-option value="234">234</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>HEIGHT</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>TYPE</mat-label>
+                    <input matInput placeholder="" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+
+       
+    </div>
+   
+</div>
+<div class="row chassis_contnt">
+    <div class="col">
+        <mat-form-field class="example-full-width" appearance="standard">
+            <mat-label>REMARKS</mat-label>
+            <input matInput placeholder="" >
+          </mat-form-field>
+    </div>
+</div>
+<div class="row chassis_contnt">
+    <div class="col">
+        <mat-checkbox class="example-margin">ASSIGNED</mat-checkbox>
+    </div>
+</div>
+      <div class="row chassis_contnt">
+          <div class="col" align="left">
+            <button mat-raised-button  class="btnCol"> <mat-icon>save</mat-icon></button>
+            
+        </div>
+        <div class="col" align="right">
+           <span class="rfesh"><button mat-raised-button  class="btnCol"> <mat-icon>fast_rewind</mat-icon></button></span> 
+            <button mat-raised-button ><mat-icon>search</mat-icon> SEARCH</button>
+        </div>
+      </div>

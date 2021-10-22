@@ -1,0 +1,88 @@
+<br>
+<br>
+<br><br>
+<mat-card>
+    <mat-card-header>
+       <mat-card-title> Edit Order Entry</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+        <form [formGroup]="editOrderEnt">
+            <div class="row">
+                <div class="col-md-4">
+                    
+                    <mat-form-field  appearance="standard">
+                        <mat-label>ORDERNO</mat-label>
+                        <input type="text" formControlName="ORDERNO" matInput  >
+                      </mat-form-field>
+                    
+                  
+                    
+                </div>
+                <div class="col-md-4">
+                  
+                    <mat-form-field  appearance="standard">
+                        <mat-label>	VOVAGENO</mat-label>
+                        <input type="text" formControlName="VOVAGENO" matInput  >
+                      </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    
+                    <mat-form-field  appearance="standard">
+                        <mat-label>VESSELNAME</mat-label>
+                        <input type="text" formControlName="VESSELNAME" matInput  >
+                      </mat-form-field>
+                  
+                    
+                </div>
+            </div>
+    
+          
+    
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <mat-form-field  appearance="standard">
+                        <mat-label>CUSTOMERNAME</mat-label>
+                        <input type="text" formControlName="CUSTOMERNAME" matInput  >
+                      </mat-form-field>
+                </div>
+               
+                <div class="col-md-4">
+                    <mat-form-field  appearance="standard">
+                        <mat-label>AGENTNAME</mat-label>
+                        <input type="text" formControlName="AGENTNAME" matInput  >
+                      </mat-form-field>
+                </div>
+               
+                <div class="col-md-4">
+                    <mat-form-field  appearance="standard">
+                        <mat-label>CREATEDBY</mat-label>
+                        <input type="text" formControlName="CREATEDBY" matInput  >
+                      </mat-form-field>
+                </div>
+               
+            </div>
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <mat-form-field  appearance="standard">
+                        <mat-label>STATUS</mat-label>
+                        <input type="text" formControlName="STATUS" matInput  >
+                      </mat-form-field>
+                </div>
+               
+  </div>      
+  
+            <div class="row">
+             
+                <div class="col-md-12" align="right">
+                    <div class="btn_top">
+                        <button mat-raised-button color="primary" (click)="update()" ><mat-icon>save</mat-icon> </button>
+                    </div>
+                </div>
+              
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,528 @@
+<app-navbar></app-navbar> 
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Page Header -->
+                <div class="page-header_head">
+                    <div>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Inquiry</li>
+                            <li class="breadcrumb-item active" aria-current="page">Unbilled Orders</li>
+                            
+                        </ol>
+                    </div>
+                </div>
+                <!-- End Page Header -->
+
+                <!--Row-->
+                <div class="row row-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 grid-margin">
+                        <div class="card custom-card">
+                            <div class="card-header border-bottom-0 titleheadercard">
+                                <div class="d-flex justify-content-between">
+                                    <label class="main-content-label">
+                                        ORDER DETAILS</label>
+                                    <div class="ml-auto float-right">
+                                    </div>                                                       
+                                </div>
+                            </div>   
+                            
+                            <div class="table-responsive border userlist-table">
+                                <ngx-datatable 
+                                class="material"
+                                [rows]="billingOrderdetails"
+                                [rowHeight]="50"
+                                columnMode="force"
+                                [headerHeight]="50"
+                                [footerHeight]="50"
+                                [scrollbarV]="true"
+                                [scrollbarH]="false"
+                                [summaryRow]="true"
+                                [summaryPosition]="'bottom'"
+                                >
+                                <ngx-datatable-column name="SELECT" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="ORDERNO" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="BOOKINGBILLNO" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="SUBBILLNO" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="BOOKINGTYPE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="BOOKINGDATE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="BOOKINGTYPE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="BOOKINGTYPE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="ORDERTYPE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="AGENTCODE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="COSTOMERCODE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="COSTOMER" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="VESSELSCHEDULEID" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="VESSELCODE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="VESSEL" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="VOYAGENO" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="WHARF" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="PAYMENTTERM" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="BILLEDTO" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="ACTIVE" [width]="100"></ngx-datatable-column>
+                                </ngx-datatable>                    
+                             </div>                                                                                
+                        </div>
+                    </div><!-- COL END -->
+                </div>                
+                <!-- row closed  -->
+                <div class="row row-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 grid-margin">
+                        <div class="card custom-card">
+                            <div class="card-header border-bottom-0 titleheadercard">
+                                <div class="d-flex justify-content-between">
+                                    <label class="main-content-label">
+                                        CHARGES DETAILS</label>
+                                    <div class="ml-auto float-right">
+                                    </div>                                                       
+                                </div>
+                            </div>   
+                            
+                            <div class="table-responsive border userlist-table">
+                                <ngx-datatable 
+                                class="material"
+                                [rows]="billingChargesdetails"
+                                [rowHeight]="50"
+                                columnMode="force"
+                                [headerHeight]="50"
+                                [footerHeight]="50"
+                                [scrollbarV]="true"
+                                [scrollbarH]="false"
+                                [summaryRow]="true"
+                                [summaryPosition]="'bottom'"
+                                >                                
+                                <ngx-datatable-column name="CONTAINERNO." [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="SIZE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="CHARGECODE" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="MOVEMENT" [width]="50"></ngx-datatable-column>                                
+                                <ngx-datatable-column name="PAYMENTTERM" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="PAYMENTTO" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="PRICE" [width]="50"></ngx-datatable-column>                            
+                                <ngx-datatable-column name="QTY" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="DISCOUNT" [width]="50"></ngx-datatable-column>
+                                <ngx-datatable-column name="TOTALAMOUNT" [width]="50"></ngx-datatable-column>                                
+                                </ngx-datatable>                    
+                             </div>                                                                                
+                        </div>
+                    </div><!-- COL END -->
+                </div>  
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<ng-template #largemodal1 modal let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title"> Add Charge Code Detail</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+        <div class="row">
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Charge Code </label>
+                    <div class="input-group">
+
+                        <input class="form-control" placeholder="Enter Charge Code" type="text">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Module</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12 align-self-center">
+                <div class="form-group">
+                    <label for=""> Description </label>
+
+                    <div class="input-group">
+                        <textarea name="" id="" cols="30" rows="3" class="form-control"
+                            placeholder="Lookup Description"></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Label</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">General</ng-option>
+                        <ng-option value="cz">Internal Cost</ng-option>
+                        <ng-option value="de">Storage</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Billing Unit</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Billing Unit 1</ng-option>
+                        <ng-option value="cz">Billing Unit 2</ng-option>
+                        <ng-option value="de">Billing Unit 3</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+                <label class="custom-switch">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                        checked>
+                    <span class="custom-switch-indicator"></span>
+                    <span class="custom-switch-description">Load Based on</span>
+                </label>
+            </div>
+
+           
+            <div class="col-sm-2 align-self-center">
+                <div class="form-group">
+                    <label for="">VAT</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Vat" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Charge term</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="form-group">
+                    <label for="">Payment Term</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="form-group">
+                    <label for="">Credit Term</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Credit Term" type="text">
+                    </div>
+                </div>
+            </div>
+
+         
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save changes</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Cancel</button>
+    </div>
+</ng-template>
+
+<ng-template #largemodal2 modal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title"> Edit Lookup Details</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Charge Code </label>
+                    <div class="input-group">
+
+                        <input class="form-control" placeholder="Enter Charge Code" type="text">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Module</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12 align-self-center">
+                <div class="form-group">
+                    <label for=""> Description </label>
+
+                    <div class="input-group">
+                        <textarea name="" id="" cols="30" rows="3" class="form-control"
+                            placeholder="Lookup Description"></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Label</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">General</ng-option>
+                        <ng-option value="cz">Internal Cost</ng-option>
+                        <ng-option value="de">Storage</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Billing Unit</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Billing Unit 1</ng-option>
+                        <ng-option value="cz">Billing Unit 2</ng-option>
+                        <ng-option value="de">Billing Unit 3</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+                <label class="custom-switch">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                        checked>
+                    <span class="custom-switch-indicator"></span>
+                    <span class="custom-switch-description">Load Based on</span>
+                </label>
+            </div>
+
+           
+            <div class="col-sm-2 align-self-center">
+                <div class="form-group">
+                    <label for="">VAT</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Vat" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Charge term</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="form-group">
+                    <label for="">Payment Term</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="form-group">
+                    <label for="">Credit Term</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Credit Term" type="text">
+                    </div>
+                </div>
+            </div>
+
+         
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Cancel</button>
+    </div>
+</ng-template>
+
+
+
+<ng-template #largemodal3 modal let-modal>
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title"> Delete Lookup Details</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Charge Code </label>
+                    <div class="input-group">
+
+                        <input class="form-control" placeholder="Enter Charge Code" type="text">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Module</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+
+            <div class="col-sm-12 align-self-center">
+                <div class="form-group">
+                    <label for=""> Description </label>
+
+                    <div class="input-group">
+                        <textarea name="" id="" cols="30" rows="3" class="form-control"
+                            placeholder="Lookup Description"></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Label</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">General</ng-option>
+                        <ng-option value="cz">Internal Cost</ng-option>
+                        <ng-option value="de">Storage</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Billing Unit</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Billing Unit 1</ng-option>
+                        <ng-option value="cz">Billing Unit 2</ng-option>
+                        <ng-option value="de">Billing Unit 3</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+                <label class="custom-switch">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                        checked>
+                    <span class="custom-switch-indicator"></span>
+                    <span class="custom-switch-description">Load Based on</span>
+                </label>
+            </div>
+
+           
+            <div class="col-sm-2 align-self-center">
+                <div class="form-group">
+                    <label for="">VAT</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Vat" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 align-self-center">
+
+                <div class="form-group">
+                    <label for="">Charge term</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="form-group">
+                    <label for="">Payment Term</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">Admin</ng-option>
+                        <ng-option value="cz">Dashboard</ng-option>
+                        <ng-option value="de">Billing</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="form-group">
+                    <label for="">Credit Term</label>
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Credit Term" type="text">
+                    </div>
+                </div>
+            </div>
+
+         
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Cancel</button>
+    </div>
+</ng-template>

@@ -1,0 +1,421 @@
+<app-navbar></app-navbar>
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Page Header -->
+                <div class="page-header_head">
+                    <div>
+
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Masterdata</li>
+                            <li class="breadcrumb-item active" aria-current="page">Compnay</li>
+                        </ol>
+                    </div>
+
+                </div>
+                <!-- End Page Header -->
+
+                <!--Row-->
+                <div class="row row-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 grid-margin">
+                        <div class="card custom-card">
+                            <div class="card-header border-bottom-0 titleheadercard">
+                                <div class="d-flex justify-content-between">
+                                    <label class="main-content-label">
+                                        COMPANY LIST</label>
+
+                                   
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="table-responsive border userlist-table">
+                                <table class="table card-table table-striped table-vcenter text-nowrap mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="wd-lg-8p"><span>Company Code</span></th>
+                                            <th class="wd-lg-20p"><span>Company Name</span></th>
+
+                                            <th class="wd-lg-20p"><span>ACTION</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                PISUT
+                                            </td>
+                                            <td> MPJ DISTIBUTION CENTER</td>
+                                            <td>
+                                                <button href="" class="btn btn-sm btn-info mr-1 btn-table"
+                                                    (click)="LargeOpen1(largemodal1)">
+                                                    <i class="fe fe-edit-2"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+
+                    </div><!-- COL END -->
+                </div>
+                <!-- row closed  -->
+
+                <div class="row row-sm">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 grid-margin">
+                        <div class="card custom-card">
+                            <div class="card-header border-bottom-0 titleheadercard">
+                                <div class="d-flex justify-content-between">
+                                    <label class="main-content-label">
+                                        BRANCH LIST</label>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="table-responsive border userlist-table">
+                                <table class="table card-table table-striped table-vcenter text-nowrap mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="wd-lg-8p"><span>BRANCH CODE</span></th>
+                                            <th class="wd-lg-20p"><span>BRANCH NAME</span></th>
+
+                                            <th class="wd-lg-20p"><span>ACTION</span></th>
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                LCH
+                                            </td>
+                                            <td> MPJ - LCH</td>
+                                            <td>
+
+                                                <button href="" class="btn btn-sm btn-info mr-1 btn-table"
+                                                    (click)="LargeOpen2(largemodal2)">
+                                                    <i class="fe fe-edit-2"></i>
+                                                </button>
+
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+
+                    </div><!-- COL END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<ng-template #largemodal1 let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title">
+            Company Deatils </h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+        <div class="no-gutter row">
+            <div class="col-sm-3">
+                <div class="form-group">   
+                <label for="">Company Code</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Company Code" type="text">
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">   
+                <label for="">Company Name</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Company Name" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-3">  <div class="form-group">   
+                <label for="">Register Name</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Register Name" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">   
+                <label for="">Address 1</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Address" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">   
+                <label for="">Address 2</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Address" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">   
+                <label for="">Website</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Website" type="text">
+                </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-3">
+                <div class="form-group">   
+                <label for="">Province</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Province" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">   
+                <label for="">Pincode</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Pincode" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                
+                <div class="form-group">
+                    <label for="">Contry Code</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">+1</ng-option>
+                        <ng-option value="cz">+32</ng-option>
+                        <ng-option value="de">+91</ng-option>
+
+                    </ng-select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">   
+                <label for="">Phone Number</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Phone Number" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">   
+                <label for="">Fax</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Fax" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">   
+                <label for="">Website</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Website" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">   
+                <label for="">Socail Network 1</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Socail Network link" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">   
+                <label for="">Socail Network 2</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="Enter Socail Network link" type="text">
+                </div>
+                </div>
+            </div>
+
+          
+
+            
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Cancel</button>
+    </div>
+</ng-template>
+
+<ng-template #largemodal2 modal let-modal>
+    <!-- BASIC MODAL -->
+    <div class="modal-header">
+        <h6 class="modal-title" id="modal-basic-title"> Branch Details</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="cardmodel"> 
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="form-group">
+                <label for="">Branch Code</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Branch Code" type="text">
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">  <div class="form-group"> 
+                <label for="">Branch Name</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Branch Name" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">  <div class="form-group"> 
+                <label for="">Register No</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Register No" type="text">
+                 
+                </div></div>
+            </div>
+            </div>
+
+        </div>
+
+
+            <div class="row"> 
+                
+                <div class="col-sm-12">
+                    <h4 class="modalbodyhead">Address</h4>
+                    
+                </div>
+
+
+                <div class="col-sm-6">  <div class="form-group"> 
+                    <label for="">Address 1</label>
+                    <div class="input-group">
+    
+                        <input class="form-control" placeholder="Enter Address 1" type="text">
+                     </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">  <div class="form-group">
+                    <label for="">Address 2</label>
+                    <div class="input-group">
+    
+                        <input class="form-control" placeholder="Enter Address 2" type="text">
+                        
+                    </div></div>
+                </div>
+                <div class="col-sm-4">  <div class="form-group"> 
+                    <label for="">Province</label>
+                    <div class="input-group">
+    
+                        <input class="form-control" placeholder="Enter Province" type="text">
+                     </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">  <div class="form-group"> 
+                    <label for="">Postcode</label>
+                    <div class="input-group">
+    
+                        <input class="form-control" placeholder="Enter Postcode" type="text">
+                     </div>
+                    </div>
+                </div>
+
+
+            <div class="col-sm-4">  <div class="form-group"> 
+                <div class="form-group">
+                    <label for="">Country Code</label>
+                    <ng-select name="country" class="form-control p-0 lin-feild">
+                        <ng-option value="">+1</ng-option>
+                        <ng-option value="cz">+21</ng-option>
+                        <ng-option value="de">+91</ng-option>
+
+                    </ng-select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">  <div class="form-group"> 
+                <label for="">Phone Number</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Phone Number" type="text">
+                 </div>
+                </div>
+            </div>
+            <div class="col-sm-4">  <div class="form-group"> 
+                <label for="">Fax Number</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Fax Number" type="text">
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">  <div class="form-group"> 
+                <label for="">Website</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Website link" type="text">
+                 </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">  <div class="form-group"> 
+                <label for="">Social Network 1</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Social Network 1" type="text">
+                 </div>
+                </div>
+            </div>
+            <div class="col-sm-4">  <div class="form-group"> 
+                <label for="">Social Network 2</label>
+                <div class="input-group">
+
+                    <input class="form-control" placeholder="Enter Social Network 2" type="text">
+                 </div>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn ripple btn-primary" type="button">Save changes</button>
+        <button type="button" class="btn ripple btn-secondary" (click)="modal.close('Close click')">Close</button>
+    </div>
+</ng-template>

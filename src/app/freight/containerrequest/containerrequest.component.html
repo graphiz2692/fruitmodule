@@ -1,0 +1,96 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">container request</li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+        <span class="captalize">Container Request</span>
+          
+           <span class="rgt-icns"> <button mat-raised-button color="primary" class="rfesh" (click)="openDialog()"> <mat-icon>search</mat-icon> </button>
+            <button mat-raised-button color="warn" class="rfesh"> <mat-icon>cached</mat-icon> </button>
+            <button mat-raised-button color="accent"> <mat-icon>exit_to_app</mat-icon> </button></span>
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+         
+
+          <!-- REQUEST NO.-->
+          <ng-container matColumnDef="REQUESTNO">
+            <th mat-header-cell *matHeaderCellDef> REQUEST NO. </th>
+            <td mat-cell *matCellDef="let element"> {{element.REQUESTNO}} </td>
+          </ng-container>
+        
+      
+        
+          <!-- SHIPPING AGENT. -->
+          <ng-container matColumnDef="SHIPPINGAGENT">
+            <th mat-header-cell *matHeaderCellDef> SHIPPING AGENT </th>
+            <td mat-cell *matCellDef="let element"> {{element.SHIPPINGAGENT}} </td>
+          </ng-container>
+        
+          <!-- CONSIGNEE -->
+          <ng-container matColumnDef="CONSIGNEE">
+            <th mat-header-cell *matHeaderCellDef> CONSIGNEE </th>
+            <td mat-cell *matCellDef="let element"> {{element.CONSIGNEE}} </td>
+          </ng-container>
+        
+        <!-- 	HAULER NAME. -->
+          <ng-container matColumnDef="HAULERNAME">
+            <th mat-header-cell *matHeaderCellDef> 	HAULER NAME </th>
+            <td mat-cell *matCellDef="let element"> {{element.HAULERNAME}} </td>
+          </ng-container>
+        
+       <!-- ACTION -->
+       <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>   ACTION
+             </th>
+        <td mat-cell *matCellDef="let element"> <a [routerLink]="['/freight/editContainerRequest',element.id]" mat-button color="primary"><mat-icon>edit</mat-icon></a>
+           <button mat-button color="accent"><mat-icon>delete</mat-icon></button> </td>
+      </ng-container>
+          
+        
+          <tr mat-header-row *matHeaderRowDef="col"></tr>
+          <tr mat-row *matRowDef="let row; columns: col;"></tr>
+          
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons 
+        aria-label="Select page of periodic elements">
+  </mat-paginator>
+      </mat-card-content>
+    
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

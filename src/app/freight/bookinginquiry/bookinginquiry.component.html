@@ -1,0 +1,261 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">booking inquiry </li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+            Booking Inquiry
+          
+           
+
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+
+       
+      
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>AGENT</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="standard">
+                    <mat-label>BOOKING TYPE</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let item of booking" [value]="item.value">
+                        {{item.value}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>FORWARDER</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>BOOKING B/L NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field  appearance="standard">
+                    <mat-label>  CUSTOMER</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label> CONTAINER NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+       
+            
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>VESSEL CODE</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>VOYAGE NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <span > <button mat-raised-button color="primary" class="rfesh" > <mat-icon>search</mat-icon> </button>
+                    <button mat-raised-button color="primary" class="rfesh"> <mat-icon>replay</mat-icon> </button>
+                    </span>
+
+              
+            </div>
+        </div>
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8 mt-top_shet">
+    
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+  
+                 
+  
+           <!-- ORDER NO. -->
+            <ng-container matColumnDef="ORDERNO">
+              <th mat-header-cell *matHeaderCellDef>   ORDER NO.
+                   </th>
+              <td mat-cell *matCellDef="let element"> {{element.ORDERNO}} </td>
+            </ng-container>
+  
+                <!-- CONTAINER NO.-->
+                <ng-container matColumnDef="CONTAINERNO">
+                  <th mat-header-cell *matHeaderCellDef>CONTAINER NO. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.CONTAINERNO}} </td>
+                </ng-container>
+  
+                   <!-- CONTAINER KEY-->
+                   <ng-container matColumnDef="CONTAINERKEY">
+                      <th mat-header-cell *matHeaderCellDef>CONTAINER KEY </th>
+                      <td mat-cell *matCellDef="let element"> {{element.CONTAINERKEY}} </td>
+                    </ng-container>
+  
+                        <!--BOOKING DATE-->
+                   <ng-container matColumnDef="BOOKINGDATE">
+                      <th mat-header-cell *matHeaderCellDef>BOOKING DATE</th>
+                      <td mat-cell *matCellDef="let element"> {{element.BOOKINGDATE}} </td>
+                    </ng-container>
+  
+                        <!--BOOKING-B/L NO.-->
+                   <ng-container matColumnDef="BOOKINGBLNO">
+                      <th mat-header-cell *matHeaderCellDef>BOOKING-B/L NO.</th>
+                      <td mat-cell *matCellDef="let element"> {{element.BOOKINGBLNO}} </td>
+                    </ng-container>
+  
+  
+                        <!--BOOKING TYPE-->
+                   <ng-container matColumnDef="BOOKINGTYPE">
+                      <th mat-header-cell *matHeaderCellDef>BOOKING TYPE</th>
+                      <td mat-cell *matCellDef="let element"> {{element.BOOKINGTYPE}} </td>
+                    </ng-container>
+  
+  
+                        <!--AGENT CODE-->
+                   <ng-container matColumnDef="AGENTCODE">
+                      <th mat-header-cell *matHeaderCellDef>AGENT CODE</th>
+                      <td mat-cell *matCellDef="let element"> {{element.AGENTCODE}} </td>
+                    </ng-container>
+  
+  
+                        <!--CUSTOMER-->
+                   <ng-container matColumnDef="CUSTOMER">
+                      <th mat-header-cell *matHeaderCellDef>CUSTOMER</th>
+                      <td mat-cell *matCellDef="let element"> {{element.CUSTOMER}} </td>
+                    </ng-container>
+  
+                        <!--VESSEL CODE-->
+                   <ng-container matColumnDef="VESSELCODE">
+                      <th mat-header-cell *matHeaderCellDef>VESSEL CODE</th>
+                      <td mat-cell *matCellDef="let element"> {{element.VESSELCODE}} </td>
+                    </ng-container>
+
+                        <!--VOYAGE NO.-->
+                   <ng-container matColumnDef="VOYAGENO">
+                      <th mat-header-cell *matHeaderCellDef>VOYAGE NO.</th>
+                      <td mat-cell *matCellDef="let element"> {{element.VOYAGENO}} </td>
+                    </ng-container>
+  
+                       
+  
+     
+          
+        
+            
+          
+            <tr mat-header-row *matHeaderRowDef="col"></tr>
+            <tr mat-row *matRowDef="let row; columns: col;"></tr>
+            
+          </table>
+          
+
+
+          
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-top_shet">
+    
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+
+               
+
+         <!-- MOVEMENT -->
+          <ng-container matColumnDef="MOVEMENT">
+            <th mat-header-cell *matHeaderCellDef>   MOVEMENT
+                 </th>
+            <td mat-cell *matCellDef="let element"> {{element.MOVEMENT}} </td>
+          </ng-container>
+
+              <!-- TRANSACTION NO-->
+              <ng-container matColumnDef="TRANSACTIONNO">
+                <th mat-header-cell *matHeaderCellDef>TRANSACTION NO </th>
+                <td mat-cell *matCellDef="let element"> {{element.TRANSACTIONNO}} </td>
+              </ng-container>
+
+                 <!--MVMT DATE-->
+                 <ng-container matColumnDef="MVMTDATE">
+                    <th mat-header-cell *matHeaderCellDef>MVMT DATE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.MVMTDATE}} </td>
+                  </ng-container>
+
+                      <!--BOOKING DATE-->
+                 <ng-container matColumnDef="BOOKINGDATE">
+                    <th mat-header-cell *matHeaderCellDef>BOOKING DATE</th>
+                    <td mat-cell *matCellDef="let element"> {{element.BOOKINGDATE}} </td>
+                  </ng-container>
+
+                      <!--STATUS.-->
+                 <ng-container matColumnDef="STATUS">
+                    <th mat-header-cell *matHeaderCellDef>STATUS</th>
+                    <td mat-cell *matCellDef="let element"> {{element.STATUS}} </td>
+                  </ng-container>
+
+
+                      <!--YARD LOCATION-->
+                 <ng-container matColumnDef="YARDLOCATION">
+                    <th mat-header-cell *matHeaderCellDef>YARD LOCATION</th>
+                    <td mat-cell *matCellDef="let element"> {{element.YARDLOCATION}} </td>
+                  </ng-container>
+
+
+        
+      
+          
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          
+        </table>
+        
+      </mat-card-content>
+    
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

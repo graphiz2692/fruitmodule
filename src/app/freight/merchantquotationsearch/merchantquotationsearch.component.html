@@ -1,0 +1,399 @@
+
+<section class="bodysection">
+  <div class="container-fluid ">
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="page-header_head">
+              <div>
+            
+                  <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+                      <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+                      <li class="breadcrumb-item " ><a [routerLink]="['/freight/merchantquotation'] ">merchant quotation</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">add merchant quotation</li>
+                  </ol>
+              </div>
+            
+            </div>     
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>
+                Merchant Quotation
+                
+                
+            
+              </mat-card-title>
+               
+            </mat-card-header>
+            <mat-card-content>
+          
+             
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>QUOTATION NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+                
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="standard">
+                    <mat-label>QUOTATION DATE</mat-label>
+                    <input matInput [matDatepicker]="quotaion">
+                    <mat-datepicker-toggle matSuffix [for]="quotaion"></mat-datepicker-toggle>
+                    <mat-datepicker #quotaion></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>PREPARED  BY</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>CUSTOMER</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+                
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="standard">
+                    <mat-label>EFFECTIVE DATE</mat-label>
+                    <input matInput [matDatepicker]="effective">
+                    <mat-datepicker-toggle matSuffix [for]="effective"></mat-datepicker-toggle>
+                    <mat-datepicker #effective></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="standard">
+                    <mat-label>EXPIRY DATE</mat-label>
+                    <input matInput [matDatepicker]="expiry">
+                    <mat-datepicker-toggle matSuffix [for]="expiry"></mat-datepicker-toggle>
+                    <mat-datepicker #expiry></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <mat-form-field  appearance="standard">
+                    <mat-label>REMARKS</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+                
+            </div>
+     
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>OLD QUOTATION NO</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        
+              
+            </mat-card-content>
+         
+          </mat-card>
+
+
+          <mat-card class="mt-top">
+            <mat-card-header>
+              <mat-card-title>
+              Details
+                
+                 <span class="rgt-icns"> 
+                     <button mat-raised-button color="primary" class="rfesh" (click)="openDialog()" > <mat-icon>add</mat-icon> </button>
+                  </span>   
+      
+            
+              </mat-card-title>
+               
+            </mat-card-header>
+            <mat-card-content>
+          
+                <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    
+                    <!--- Note that these columns can be defined in any order.
+                          The actual rendered columns are set as a property on the row definition" -->
+                  
+                   <!-- ACTION -->
+                    <ng-container matColumnDef="ACTION">
+                      <th mat-header-cell *matHeaderCellDef>    ACTION
+                           </th>
+                      <td mat-cell *matCellDef="let element"> {{element.ACTION}} </td>
+                    </ng-container>
+          
+                    <!-- JOB-->
+                    <ng-container matColumnDef="JOB">
+                      <th mat-header-cell *matHeaderCellDef> JOB </th>
+                      <td mat-cell *matCellDef="let element"> {{element.JOB}} </td>
+                    </ng-container>
+                  
+                
+                  
+                    <!-- SHIPMENT TYPE -->
+                    <ng-container matColumnDef="SHIPMENTTYPE">
+                      <th mat-header-cell *matHeaderCellDef> SHIPMENT TYPE </th>
+                      <td mat-cell *matCellDef="let element"> {{element.SHIPMENTTYPE}} </td>
+                    </ng-container>
+                  
+                    <!-- JOB CATEGORY -->
+                    <ng-container matColumnDef="JOBCATEGORY">
+                      <th mat-header-cell *matHeaderCellDef>JOB CATEGORY </th>
+                      <td mat-cell *matCellDef="let element"> {{element.JOBCATEGORY}} </td>
+                    </ng-container>
+                  
+                  <!-- 	DESCRIPTION -->
+                    <ng-container matColumnDef="DESCRIPTION">
+                      <th mat-header-cell *matHeaderCellDef> DESCRIPTION </th>
+                      <td mat-cell *matCellDef="let element"> {{element.DESCRIPTION}} </td>
+                    </ng-container>
+          
+          
+                  <!-- 	TYPE SIZE -->
+                    <ng-container matColumnDef="TYPESIZE">
+                      <th mat-header-cell *matHeaderCellDef>TYPE SIZE </th>
+                      <td mat-cell *matCellDef="let element"> {{element.TYPESIZE}} </td>
+                    </ng-container>
+          
+                  <!-- 	CURR -->
+                    <ng-container matColumnDef="CURR">
+                      <th mat-header-cell *matHeaderCellDef>CURR </th>
+                      <td mat-cell *matCellDef="let element"> {{element.CURR}} </td>
+                    </ng-container>
+                  
+                  <!-- 	SELL RATE -->
+                    <ng-container matColumnDef="SELLRATE">
+                      <th mat-header-cell *matHeaderCellDef>SELL RATE </th>
+                      <td mat-cell *matCellDef="let element"> {{element.SELLRATE}} </td>
+                    </ng-container>
+
+                      <!-- 	EST COST -->
+                      <ng-container matColumnDef="ESTCOST">
+                        <th mat-header-cell *matHeaderCellDef>EST COST </th>
+                        <td mat-cell *matCellDef="let element"> {{element.ESTCOST}} </td>
+                      </ng-container>
+
+                        <!-- 	MIN AMT -->
+                        <ng-container matColumnDef="MINAMT">
+                            <th mat-header-cell *matHeaderCellDef>MIN AMT </th>
+                            <td mat-cell *matCellDef="let element"> {{element.MINAMT}} </td>
+                          </ng-container>
+
+                             <!-- MAX AMT-->
+                        <ng-container matColumnDef="MAXAMT">
+                            <th mat-header-cell *matHeaderCellDef>MAX AMT </th>
+                            <td mat-cell *matCellDef="let element"> {{element.MAXAMT}} </td>
+                          </ng-container>
+
+                            <!--SLAB-->
+                        <ng-container matColumnDef="SLAB">
+                            <th mat-header-cell *matHeaderCellDef>SLAB</th>
+                            <td mat-cell *matCellDef="let element"> {{element.SLAB}} </td>
+                          </ng-container>
+                  
+                 
+                    
+                  
+                    <tr mat-header-row *matHeaderRowDef="col"></tr>
+                    <tr mat-row *matRowDef="let row; columns: col;"></tr>
+                    
+                  </table>
+            </mat-card-content>
+         
+          </mat-card>
+
+          <div class="row mt-top" >
+              <div class="col">
+                  
+                <mat-card>
+                    <mat-card-header>
+                      <mat-card-title>
+                      
+                        
+                        Cargo Storage Free Days
+                    
+                      </mat-card-title>
+                       
+                    </mat-card-header>
+                    <mat-card-content>
+                  
+                      
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div>
+                                   
+                                    <h2 class="normal_text">Normal</h2>
+                                </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label>EXPORT</mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label>IMPORT</mat-label>
+                                    <input matInput  >
+                                  </mat-form-field> 
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label>LOCAL</mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div>
+                                    <h2 class="normal_text">Dg</h2>
+                                </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label></mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label></mat-label>
+                                    <input matInput  >
+                                  </mat-form-field> 
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label></mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                            </div>
+                            <div class="col-md-4">
+                               
+                            </div>
+                        </div>
+                
+                      
+                    </mat-card-content>
+                 
+                  </mat-card>
+        
+              </div>
+              <div class="col">
+                <mat-card>
+                    <mat-card-header>
+                      <mat-card-title>
+                      
+                        
+                        Container Storage Free Days
+                    
+                      </mat-card-title>
+                       
+                    </mat-card-header>
+                    <mat-card-content>
+                  
+                      
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div>
+                                   
+                                    <h2 class="normal_text">Normal</h2>
+                                </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label>EXPORT</mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label>IMPORT</mat-label>
+                                    <input matInput  >
+                                  </mat-form-field> 
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label>LOCAL</mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label>TRAILER DETENTION FREE DAY</mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div>
+                                    <h2 class="normal_text">Dg</h2>
+                                </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label></mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label></mat-label>
+                                    <input matInput  >
+                                  </mat-form-field> 
+                               </div>
+                               <div>
+                                <mat-form-field  appearance="standard" class="form_feid">
+                                    <mat-label></mat-label>
+                                    <input matInput  >
+                                  </mat-form-field>
+                               </div>
+                            </div>
+                            <div class="col-md-4">
+                               
+                            </div>
+                        </div>
+                      
+                    </mat-card-content>
+                 
+                  </mat-card>
+        
+              </div>
+          </div>
+         
+
+
+
+
+         
+                
+              <mat-card class="mt-top">
+              
+                  <mat-card-content>
+                
+                    <div class="row">
+                      <div class="col">
+                     <button mat-raised-button color="primary"> <mat-icon>save</mat-icon> SAVE </button>
+                      </div>
+                      <div class="col" align="right">
+                        <button mat-raised-button color="primary"> <mat-icon>fast_rewind</mat-icon> BACK </button>
+                        <button mat-raised-button> CLEAR </button>
+                      </div>
+                  </div>
+              
+                    
+                  </mat-card-content>
+               
+                </mat-card>
+      </div>
+      </div>
+      </div>
+      </section>
+      
+          
+
+      

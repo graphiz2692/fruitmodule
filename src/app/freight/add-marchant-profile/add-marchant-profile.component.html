@@ -1,0 +1,345 @@
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item "><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item"><a [routerLink]="['/freight/merchantProfile']" routerLinkActive="router-link-active" >merchant-profile</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add merchant-profile</li>
+        </ol>
+    </div>
+  
+  </div>
+  <mat-card class="main">
+
+    <mat-card-header>
+      <mat-card-title>Merchant Profile List</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <div class="row">
+              <div class="col-md-6">
+<mat-form-field>
+    <mat-label>MERCHANT NAME</mat-label>
+    <input type="text" matInput>
+</mat-form-field>
+              </div>
+              <div class="col-md-6">
+
+                <mat-form-field>
+                    <mat-label>REGISTRATION NO.</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                    <mat-label>GST NO.</mat-label>
+                    <input type="text" matInput>
+                </mat-form-field>
+              </div>
+          </div>
+
+          <mat-tab-group dynamicHeight>
+            <mat-tab label="Genral">
+              <div class="example-small-box mat-elevation-z4">
+                <mat-card class="left">
+                  <mat-card-header>
+                    <mat-card-title>Genral</mat-card-title>
+                  </mat-card-header>
+                <mat-card-content>
+                    <form>
+                      <mat-form-field>
+                        <mat-label>BILLING CUSTOMER</mat-label>
+                        <input type="text" matInput>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field>
+                        <mat-label>PORT CODE</mat-label>
+                        <input type="text" matInput>
+                        <br>
+                      </mat-form-field>
+                      <mat-form-field>
+                        <mat-label>BUSINESS REGISTRATION NO.</mat-label>
+                        <input type="text" matInput>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field>
+                    <mat-label>BUSINESS TYPE</mat-label>
+                    <mat-select>
+                    <mat-option value="M-ARMED FORCES">
+                        M- ARMED FORCES
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>OPERATOR CODE</mat-label>
+                    <input type="text" matInput>
+                  </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>AGENT CODE</mat-label>
+                    <input type="text" matInput>
+                  </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>YARD CODE</mat-label>
+                    <mat-select>
+                    <mat-option value="M-ARMED FORCES">
+                        M- ARMED FORCES
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>WEBSITE</mat-label>
+                    <input type="text" matInput>
+                  </mat-form-field>
+                <br>           
+                     <mat-form-field>
+                    <mat-label>REMARKS</mat-label>
+                    <input type="text" matInput>
+                  </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>BOM EMAIL</mat-label>
+                    <input type="text" matInput>
+                  </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>INVOICE EMAIL</mat-label>
+                    <input type="text" matInput>
+                  </mat-form-field>
+                <br>
+
+                    </form>
+                  </mat-card-content>
+                </mat-card>
+                
+                <mat-card class="right">
+
+                    <mat-card-header>
+                        <mat-card-title>Merchant Type</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <mat-slide-toggle>BILLING CUSTOMER</mat-slide-toggle>
+                        <br>
+                        <mat-slide-toggle>SHIPPER/EXPORTER/CONSIGNOR/SELLER</mat-slide-toggle><br>
+                        <mat-slide-toggle>PRINCIPLE</mat-slide-toggle><br>
+                        <mat-slide-toggle>IMPORTER/CONSIGNEE</mat-slide-toggle><br>
+                        <mat-slide-toggle>VENDOR-MANAGED INVENTORY</mat-slide-toggle><br>
+                        <mat-slide-toggle>FREIGHT FORWARDER</mat-slide-toggle><br>
+                        <mat-slide-toggle>ORIGIN/DESTINATION AGENT</mat-slide-toggle><br>
+                        <mat-slide-toggle>HAULIER</mat-slide-toggle><br>
+                        <mat-slide-toggle>AIR LINER/SHIPPING AGENT</mat-slide-toggle><br>
+                        <mat-slide-toggle>TRANSPORT</mat-slide-toggle><br>
+                        <mat-slide-toggle>VENDOR</mat-slide-toggle><br>
+                        <mat-slide-toggle>PORT/TERMINAL OPERATOR</mat-slide-toggle><br>
+                        <br><br>
+                        <hr>
+                        <mat-slide-toggle>ACTIVE ACCOUNT</mat-slide-toggle><br>
+                        <mat-slide-toggle>TAXABLE</mat-slide-toggle><br>
+
+                    </mat-card-content>
+
+                </mat-card>
+
+              </div>
+            </mat-tab>
+            <mat-tab label="Address">
+              <div class="example-large-box mat-elevation-z4">
+              <mat-card>
+                  <mat-card-header>
+                      <mat-card-title>
+                          Address
+                          <span class="rgt-icns">
+                            <button mat-raised-button color="primary" (click)="add()"  > <mat-icon>add</mat-icon> </button>
+                          </span>
+                      </mat-card-title>
+                  </mat-card-header>
+<mat-card-content>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- ACTIVE -->
+        <ng-container matColumnDef="ACTIVE">
+          <th mat-header-cell *matHeaderCellDef> ACTIVE </th>
+          <td mat-cell *matCellDef="let element"> {{element.ACTIVE}} </td>
+        </ng-container>
+      
+        <!--BILL -->
+        <ng-container matColumnDef="BILL">
+          <th mat-header-cell *matHeaderCellDef> BILL</th>
+          <td mat-cell *matCellDef="let element"> {{element.BILL}} </td>
+        </ng-container>
+      
+        <!--OPRColumn -->
+        <ng-container matColumnDef="OPR">
+          <th mat-header-cell *matHeaderCellDef>OPR</th>
+          <td mat-cell *matCellDef="let element"> {{element.OPR}} </td>
+        </ng-container>
+      
+        <!-- PCK Column -->
+        <ng-container matColumnDef="PCK">
+          <th mat-header-cell *matHeaderCellDef>PCK</th>
+          <td mat-cell *matCellDef="let element"> {{element.PCK}} </td>
+        </ng-container>
+
+        <!-- TELNO Column -->
+        <ng-container matColumnDef="TELNO">
+            <th mat-header-cell *matHeaderCellDef>TEL NO.</th>
+            <td mat-cell *matCellDef="let element"> {{element.TELNO}} </td>
+            </ng-container>
+
+              <!--AREA CODE Column -->
+        <ng-container matColumnDef="AREACODE">
+            <th mat-header-cell *matHeaderCellDef>AREA CODE</th>
+            <td mat-cell *matCellDef="let element"> {{element.AREACODE}} </td>
+          </ng-container>
+
+          
+              <!--ADDRESS1 Column -->
+        <ng-container matColumnDef="ADDRESS1">
+            <th mat-header-cell *matHeaderCellDef>ADDRESS1</th>
+            <td mat-cell *matCellDef="let element"> {{element.ADDRESS1}} </td>
+          </ng-container>
+
+          
+            <!--ADDRESS2 Column -->
+            <ng-container matColumnDef="ADDRESS2">
+                <th mat-header-cell *matHeaderCellDef>ADDRESS2</th>
+                <td mat-cell *matCellDef="let element"> {{element.ADDRESS2}} </td>
+            </ng-container>
+          
+              <!--id Column -->
+        <ng-container matColumnDef="ID">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let element"> {{element.ID}} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+
+</mat-card-content>
+
+                </mat-card> 
+
+                  
+                  
+
+
+
+
+
+              </div>
+            </mat-tab>
+            <mat-tab label="Billing">
+              <div class="example-large-box mat-elevation-z4">
+                <br>
+                <br>
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Billing</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>DEBTOR CODE</mat-label>
+                                    <input type="text" name="" id="" matInput>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>CREDITOR CODE</mat-label>
+                                    <input type="text" name="" id="" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>DEFAULT CURRENCY</mat-label>
+                                    <mat-select>
+                                        <mat-option value="M-ARMED FORCES">
+                                            M- ARMED FORCES
+                                          </mat-option>
+                                        </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>GST NO.</mat-label>
+                                    <input type="text" name="" id="" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>BILLING METHOD</mat-label>
+                                    <mat-select>
+                                        <mat-option value="M-ARMED FORCES">
+                                            M- ARMED FORCES
+                                          </mat-option>
+                                        </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label></mat-label>
+                                    <input type="text" name="" id="" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>CREDIT LIMIT</mat-label>
+                                    <input type="text" name="" id="" matInput>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field>
+                                    <mat-label>CURRENT BALANCE</mat-label>
+                                    <input type="text" name="" id="" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+<div class="row">
+    <div class="col-md-6">
+        <button mat-raised-button color="primary"> <mat-icon>save</mat-icon> SAVE</button>
+    </div>
+    <div class="col-md-6">
+<span class="rgt-icns"><button class="rfesh" mat-raised-button> CLEAR </button>
+        <button mat-raised-button color="accent"><mat-icon>fast_rewind</mat-icon> BACK</button></span>  
+    </div>
+</div>
+      </mat-card-content>
+     
+    
+    </mat-card>
+      
+      </div>
+      </div>
+      </div>
+      </section>
+    

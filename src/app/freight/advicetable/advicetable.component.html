@@ -1,0 +1,129 @@
+<form [formGroup]="collectionAdviceData">
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>JOB NO.</mat-label>
+                    <input type="number" matInput placeholder="Ex. Job No" formControlName="JOBNO" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+               
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>  EMPTY DEHIRE</mat-label>
+                    <input type="text" matInput placeholder="Ex. Empty Dehire" formControlName="EMPTYDEHIRE" >
+                  </mat-form-field>
+                  
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>    CONTAINER NO.</mat-label>
+                    <input matInput type="text" placeholder="Ex. Container No" formControlName="CONTAINERNO" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>     MOVEMENT </mat-label>
+                    <input type="text" matInput placeholder="Ex. Container No" formControlName="MOVEMENT" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label> PICKUP FROM </mat-label>
+                    <input type="text" matInput placeholder="Ex. Container No" formControlName="PICKUPFROM" >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>DELIVERY TO </mat-label>
+                    <input type="text" matInput placeholder="Ex. Container No" formControlName="DELIVERYTO">
+                  </mat-form-field>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>CALLING DATE</mat-label>
+                    <input matInput [matDatepicker]="dat" placeholder="01/09/2021" formControlName="CALLINGDATE">
+                    <mat-datepicker-toggle matSuffix [for]="dat"></mat-datepicker-toggle>
+                    <mat-datepicker #dat></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label></mat-label>
+                    <input matInput [matDatepicker]="from" placeholder="30/09/2021" formControlName="EMPTYDATE1">
+                    <mat-datepicker-toggle matSuffix [for]="from"></mat-datepicker-toggle>
+                    <mat-datepicker #from></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>ACKNOWLEDGE BY </mat-label>
+                    <input type="text" matInput placeholder="" formControlName="ACKNOWLEDGEBY" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>REQUEST DATE</mat-label>
+                    <input matInput [matDatepicker]="datepicker" placeholder="01/09/2021" formControlName="REQUESTDATE">
+                    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label></mat-label>
+                    <input matInput [matDatepicker]="to" placeholder="30/09/2021" formControlName="EMPTYDATE2">
+                    <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+                    <mat-datepicker #to></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label> ACKNOWLEDGE DATE </mat-label>
+                    <input type="text" matInput placeholder="" formControlName="ACKNOWLEDGEDATE">
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <mat-form-field class="example-full-width" appearance="standard">
+                    <mat-label>REMARKS </mat-label>
+                    <input type="text" matInput placeholder="" formControlName="REMARKS">
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+         
+            <div class="col-md-12" align="right">
+                <div class="btn_top" >
+                    <button mat-raised-button color="primary" type="reset">RESET</button> &nbsp;&nbsp;&nbsp;
+                    <button mat-raised-button color="primary" (click)="funSave()" [mat-dialog-close]="true"><mat-icon>save</mat-icon> </button>
+                </div>
+             
+            </div>
+          
+        </div>
+    </form>
+
+        

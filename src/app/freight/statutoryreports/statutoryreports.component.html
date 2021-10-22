@@ -1,0 +1,117 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">statutory reports</li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+            Statutory Reports
+          
+          
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+    
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    Reports
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-md-4">
+                      <mat-list role="list">
+                          <mat-list-item role="listitem">GST03 RETURN</mat-list-item>
+                          <mat-list-item role="listitem">M1 REPORT (RAW MATERIAL MOVEMENT REPORT)</mat-list-item>
+                          <mat-list-item role="listitem">M2 REPORT (FINISHED GOODS MOVEMENT REPORT)</mat-list-item>
+                          <mat-list-item role="listitem"> SCRAP/WASTE MOVEMENT REPORT</mat-list-item>
+                          <mat-list-item role="listitem">WAIVED DUTY AND TAXES REPORT</mat-list-item>
+                          <mat-list-item role="listitem">EXPORT PRICE SURVEY REPORT – XP1</mat-list-item>
+                          <mat-list-item role="listitem">IMPORT PRICE SURVEY – MP1</mat-list-item>
+                          <mat-list-item role="listitem">DELIVERY VERIFICATION STATEMENT – FORM 6</mat-list-item>
+                          <mat-list-item role="listitem">REPAIR AND RETURN MOVEMENT REPORT</mat-list-item>
+                          <mat-list-item role="listitem">GST RELIEF ORDER MOVEMENT REPORT</mat-list-item>
+                          <mat-list-item role="listitem">ATS MOVEMENT REPORT</mat-list-item>
+                          <mat-list-item role="listitem">PRECURSOR AUDIT REPORT</mat-list-item>
+                          <mat-list-item role="listitem">M4 LMW REPORT</mat-list-item>
+                          <mat-list-item role="listitem">FINANCE REPORT</mat-list-item>
+                        </mat-list>
+                        
+                    </div>
+                    <div class="col-md-8">
+                        <mat-card>
+                            <mat-card-header>
+                                <mat-card-title>
+                                    Finance Report
+                                </mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width" appearance="standard">
+                                            <mat-label> DATE FROM</mat-label>
+                                            <input matInput [matDatepicker]="datep" placeholder="01/09/2021">
+                                            <mat-datepicker-toggle matSuffix [for]="datep"></mat-datepicker-toggle>
+                                            <mat-datepicker #datep></mat-datepicker>
+                                          </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <mat-form-field class="example-full-width" appearance="standard">
+                                            <mat-label> DATE TO</mat-label>
+                                            <input matInput [matDatepicker]="to" placeholder="01/09/2021">
+                                            <mat-datepicker-toggle matSuffix [for]="to"></mat-datepicker-toggle>
+                                            <mat-datepicker #to></mat-datepicker>
+                                          </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                      
+                                        <button mat-raised-button color="accent" class="rfesh"  > <mat-icon>report</mat-icon> </button>
+                                    </div>
+                                    <div class="col" align="right">
+                                      
+                                        <button mat-raised-button color="primary" class="rfesh"  > <mat-icon>clear</mat-icon> </button>
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        
+      </mat-card-content>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons 
+      aria-label="Select page of periodic elements">
+</mat-paginator>
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       

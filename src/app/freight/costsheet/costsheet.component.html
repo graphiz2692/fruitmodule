@@ -1,0 +1,210 @@
+
+<section class="bodysection">
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-sm-12">
+  
+  <div class="page-header_head">
+    <div>
+  
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item " ><a href="javascript:;">Freight</a></li>
+            <li class="breadcrumb-item active" aria-current="page">cost sheet </li>
+        </ol>
+    </div>
+  
+  </div>
+  
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Cost Sheet
+          
+           <span class="rgt-icns"> 
+               <button mat-raised-button color="primary" class="rfesh"  > <mat-icon>refresh</mat-icon> </button>
+            </span>   
+
+      
+        </mat-card-title>
+         
+      </mat-card-header>
+      <mat-card-content>
+
+
+        <div class="row">
+            <div class="col" align="right">
+                <mat-form-field  appearance="standard">
+                    <mat-label>ORDER NO.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+         
+           
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>CUSTOMER</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field  appearance="standard">
+                    <mat-label>CUSTOMER REF.</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+            <div class="col-md-4">
+               
+                <mat-form-field  appearance="standard">
+                    <mat-label> BILLING STATUS</mat-label>
+                    <input matInput  >
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" >
+             
+                    
+                     
+                    <span class="rgt-icns"> 
+                        <button mat-raised-button color="primary" class="rfesh" disabled > <mat-icon>add</mat-icon> </button>
+                     </span>   
+         
+               
+               
+                    
+            </div>
+          
+        </div>
+
+     
+    
+        <table mat-table [dataSource]="data" class="mat-elevation-z8 mt-top_shet">
+    
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+
+               
+
+         <!-- ACTION -->
+          <ng-container matColumnDef="ACTION">
+            <th mat-header-cell *matHeaderCellDef>    ACTION
+                 </th>
+            <td mat-cell *matCellDef="let element"> {{element.ACTION}} </td>
+          </ng-container>
+
+              <!-- ORDER NO.-->
+              <ng-container matColumnDef="ORDERNO">
+                <th mat-header-cell *matHeaderCellDef> ORDER NO. </th>
+                <td mat-cell *matCellDef="let element"> {{element.ORDERNO}} </td>
+              </ng-container>
+
+                 <!-- CONTAINER KEY-->
+                 <ng-container matColumnDef="CONTAINERKEY">
+                    <th mat-header-cell *matHeaderCellDef> CONTAINER KEY </th>
+                    <td mat-cell *matCellDef="let element"> {{element.CONTAINERKEY}} </td>
+                  </ng-container>
+
+                      <!--CHARGE CODE-->
+                 <ng-container matColumnDef="CHARGECODE">
+                    <th mat-header-cell *matHeaderCellDef>CHARGE CODE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.CHARGECODE}} </td>
+                  </ng-container>
+
+                      <!--CURR-->
+                 <ng-container matColumnDef="CURR">
+                    <th mat-header-cell *matHeaderCellDef>CURR </th>
+                    <td mat-cell *matCellDef="let element"> {{element.CURR}} </td>
+                  </ng-container>
+
+                      <!--EX.RATE-->
+                 <ng-container matColumnDef="EXRATE">
+                    <th mat-header-cell *matHeaderCellDef>EX.RATE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.EXRATE}} </td>
+                  </ng-container>
+
+                     <!--BILLING UNIT-->
+                 <ng-container matColumnDef="BILLINGUNIT">
+                    <th mat-header-cell *matHeaderCellDef>BILLING UNIT </th>
+                    <td mat-cell *matCellDef="let element"> {{element.BILLINGUNIT}} </td>
+                  </ng-container>
+
+                      <!--QTY-->
+                 <ng-container matColumnDef="QTY">
+                    <th mat-header-cell *matHeaderCellDef>QTY </th>
+                    <td mat-cell *matCellDef="let element"> {{element.QTY}} </td>
+                  </ng-container>
+
+                    <!--PRICE-->
+                 <ng-container matColumnDef="PRICE">
+                    <th mat-header-cell *matHeaderCellDef>PRICE </th>
+                    <td mat-cell *matCellDef="let element"> {{element.PRICE}} </td>
+                  </ng-container>
+
+                     <!--ACTUAL AMT-->
+                 <ng-container matColumnDef="ACTUALAMT">
+                    <th mat-header-cell *matHeaderCellDef>ACTUAL AMT </th>
+                    <td mat-cell *matCellDef="let element"> {{element.ACTUALAMT}} </td>
+                  </ng-container>
+
+                    <!--DISCOUNT AMT-->
+                 <ng-container matColumnDef="DISCOUNTAMT">
+                    <th mat-header-cell *matHeaderCellDef>DISCOUNT AMT </th>
+                    <td mat-cell *matCellDef="let element"> {{element.DISCOUNTAMT}} </td>
+                  </ng-container>
+
+                   <!--TOTAL AMT-->
+                 <ng-container matColumnDef="TOTALAMT">
+                    <th mat-header-cell *matHeaderCellDef>TOTAL AMT</th>
+                    <td mat-cell *matCellDef="let element"> {{element.TOTALAMT}} </td>
+                  </ng-container>
+
+                       <!--OUTPUT GST -->
+                 <ng-container matColumnDef="OUTPUTGST">
+                    <th mat-header-cell *matHeaderCellDef>OUTPUT GST</th>
+                    <td mat-cell *matCellDef="let element"> {{element.OUTPUTGST}} </td>
+                  </ng-container>
+
+                         <!--REMARKS-->
+                 <ng-container matColumnDef="REMARKS">
+                    <th mat-header-cell *matHeaderCellDef>REMARKS</th>
+                    <td mat-cell *matCellDef="let element"> {{element.REMARKS}} </td>
+                  </ng-container>
+
+                      <!--INPUT GST -->
+                 <ng-container matColumnDef="INPUTGST">
+                    <th mat-header-cell *matHeaderCellDef>INPUT GST</th>
+                    <td mat-cell *matCellDef="let element"> {{element.INPUTGST}} </td>
+                  </ng-container>
+    
+
+   
+        
+      
+          
+        
+          <tr mat-header-row *matHeaderRowDef="col"></tr>
+          <tr mat-row *matRowDef="let row; columns: col;"></tr>
+          
+        </table>
+        
+      </mat-card-content>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons 
+      aria-label="Select page of periodic elements">
+</mat-paginator>
+    </mat-card>
+  
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+    
+    
+
+       
